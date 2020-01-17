@@ -20,7 +20,7 @@ body {
 
 #lower {
     background-image: url("../img/backimg.jpeg");
-    opacity: 0.5;
+    /*opacity: 0.5;*/
     top: 0;
     left: 0;
     bottom: 0;
@@ -37,6 +37,10 @@ ul {
 
 #head {
     text-align: center;
+    color: #fafafa;
+    background-color: black;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 img {
@@ -44,11 +48,15 @@ img {
 }
 
 table {
+    font-weight: bold;
+    color: #fafafa;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
     border: black solid;
     border-spacing: 2.0rem;
+    background-color: black;
+
 
 }
 
@@ -70,4 +78,10 @@ a:active{
 
 #copyright {
     text-align: center;
+}
+
+th {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
 }
