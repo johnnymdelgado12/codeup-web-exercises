@@ -7,15 +7,16 @@ body, html {
 }
 
 :root {
-    --bg-info: #b6b7f2;
-    --text-info: #8cdb9f;
-    --bg-success: #f2f783;
+    --bg-info: #a7bcf2;
+    --text-info: #c3f7b7;
+    --bg-success: #fff8b5;
     --text-success: #e6b1b4;
 }
 
 .message {
+    border: 1px lightgray solid;
     padding: 10px;
-    margin: auto;
+    margin: 10px;
     border-radius: 5px;
 
 }
@@ -23,23 +24,19 @@ body, html {
 .message-info {
     background-color: var(--bg-info);
     color: #5759d4;
-    margin: 10px;
 }
 
 .message-success {
     background-color: var(--text-info);
     color: #0d8f2c;
-    margin: 10px;
 }
 
 .message-warning {
     background-color: var(--bg-success);
     color: #8a8f27;
-    margin: 10px;
 }
 
 .message-error {
     background-color: var(--text-success) ;
     color: #851b21;
-    margin: 10px;
 }
