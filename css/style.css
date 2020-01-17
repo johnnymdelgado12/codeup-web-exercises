@@ -39,25 +39,28 @@ ul {
     text-align: center;
     color: #fafafa;
     background-color: black;
-    padding-left: 50px;
-    padding-right: 50px;
 }
 
 img {
     align-content: center;
 }
 
-table {
+table td{
+    text-align: center;
     font-weight: bold;
     color: #fafafa;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     padding: 20px;
-    border: black solid;
+    border: white solid;
     border-spacing: 2.0rem;
     background-color: black;
 
 
+}
+
+#table {
+    margin-left: 500px;
+    margin-right: 500px;
 }
 
 a:link {
@@ -81,6 +84,8 @@ a:active{
 }
 
 th {
+    text-align: center;
+    color: #fafafa;
     text-decoration: underline;
     font-weight: bold;
     font-size: 20px;
