@@ -1,3 +1,13 @@
+#blue {
+    margin: 50px auto;
+    width: 200px;
+    height: 350px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: blue;
+    float: left;
+}
+
 #star {
     margin: 50px 0;
     position: relative;
@@ -6,13 +16,14 @@
     width: 0px;
     height: 0px;
     border-right: 100px solid transparent;
-    border-bottom: 70px solid black;
+    border-bottom: 70px solid white;
     border-left: 100px solid transparent;
     transform: rotate(35deg);
 }
 
+
 #star:before {
-    border-bottom: 80px solid black;
+    border-bottom: 80px solid white;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     position: absolute;
@@ -34,7 +45,7 @@
     width: 0px;
     height: 0px;
     border-right: 100px solid transparent;
-    border-bottom: 70px solid black;
+    border-bottom: 70px solid white;
     border-left: 100px solid transparent;
     transform: rotate(-70deg);
     content: '';

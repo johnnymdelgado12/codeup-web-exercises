@@ -69,16 +69,15 @@ a {
 .media {
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom: 1px var(--separator-color);
+    border-bottom: 1px solid var(--separator-color);
     padding: .5em;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .media-image {
-    width: 50px;
+    max-width: 50px;
     margin-top: 1.33em;
     float: left;
-    clear: both;
 }
 
 .media-body {
@@ -112,6 +111,10 @@ a {
     padding: 0;
     list-style: none;
     margin: .5em;
+}
+
+.profile-entry {
+    margin: .5em 0;
 }
 
 .btn {
