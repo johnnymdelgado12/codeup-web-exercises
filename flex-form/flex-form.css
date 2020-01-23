@@ -62,7 +62,6 @@ body {
     /* flex items */
 }
 .destination {
-    display: flex;
-    flex-basis: auto;
+    flex-basis: content;
     /* bigger item */
 }

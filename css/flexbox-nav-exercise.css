@@ -8,7 +8,6 @@ body {
 nav {
     background: #a6a6a6;
     color: #333333;
-    padding: 15px;
     font-weight: bold;
 }
 
@@ -16,35 +15,57 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-    font-size: 2em;
-    padding: 2em 0;
-    display: flex;
-    align-self: center;
+    font-size: 3em;
+
+
 }
 
 
 nav a {
     text-decoration: none;
     color: #333333;
-    font-family: Verdana;
+    font-family: Verdana, sans-serif;
 
 }
 
 nav a:hover {
-    background: black;
+    color: blue;
+}
+
+.top-nav {
+
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
+}
 
+
+a {
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
 }
 
 .links {
-    display: inline-block;
+    align-content: center;
+}
+
+.linksbottom {
+    display: flex;
+
+
 }
