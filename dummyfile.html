@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Floats Example</title>
+    <title>Nav Bar</title>
     <style>
-        #container {
-            margin: 50px auto;
-            width: 500px;
-            border: 1px solid #000;
-            padding: 10px;
+        * {
+            box-sizing: border-box;
         }
-        #box1 {
-            background-color: #77AF00; /* greenish */
-            height: 100px;
-            width: 100px;
-            margin: 10px;
-            float: left;
-            position: relative;
+        body {
+            margin: 0;
         }
-        #box2 {
-            background-color: #1969B2; /* blueish */
-            height: 150px;
-            width: 150px;
-            margin: 10px;
-            float: right;
+        nav {
+            background: #333333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* made unordered list a flex container */
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-family: Verdana;
+            display: inline-block; /* inline-block to increase clickable area beyond the text */
+            padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
+        }
+        nav a:hover {
+            background: black;
+        }
+        nav ul li:nth-child(4) {
+            /*
+                this allows the last flex item to be right justified
+                by filling remaining space to the left of the flex item with margin
+            */
+            margin-left: auto;
         }
 
-        p {
-            clear: both;
+        /* mobile devices */
+        @media all and (max-width: 768px) {
+            body {
+                display: flex;
+                justify-content: flex-end;
+            }
+            nav {
+                display: inline-block;
+                height: 100vh;
+                position: fixed;
+                left: 0;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 15em;
+            }
+            main {
+                width: calc(100% - 15em);
+            }
+            nav a {
+                width: 100%;
+            }
+            nav ul li:nth-child(4) {
+                margin-left: 0;
+            }
         }
     </style>
 </head>
 <body>
-<div id="container">
-    <div id="box1"></div>
-    <div id="box2"></div>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-        enim ad minim veniam, quis nostrud exercitation ullamco laboris
-        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-        in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-        nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-        sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-</div>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
 </body>
 </html>
