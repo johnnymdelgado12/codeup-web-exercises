@@ -1,77 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Nav Bar</title>
+    <meta charset="UTF-8">
+    <title>Grid Fundamentals</title>
     <style>
         * {
             box-sizing: border-box;
         }
-        body {
-            margin: 0;
+        main {
+            background: lightgreen;
+            display: grid;
+            /*grid-template-columns: repeat(3, 200px) ;
+            grid-template-rows: repeat(3, 200px);*/
+            /*grid-gap: 50px;*/
+            grid-template: repeat(3, 250px) / repeat(3, 300px);
+            grid-column-gap: 10px ;
+            grid-row-gap: 25px;
         }
-        nav {
-            background: #333333;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex; /* made unordered list a flex container */
-        }
-        nav a {
-            text-decoration: none;
+        main div {
+            font-size: 2em;
             color: white;
-            font-family: Verdana;
-            display: inline-block; /* inline-block to increase clickable area beyond the text */
-            padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
-        }
-        nav a:hover {
-            background: black;
-        }
-        nav ul li:nth-child(4) {
-            /*
-                this allows the last flex item to be right justified
-                by filling remaining space to the left of the flex item with margin
-            */
-            margin-left: auto;
-        }
-
-        /* mobile devices */
-        @media all and (max-width: 768px) {
-            body {
-                display: flex;
-                justify-content: flex-end;
-            }
-            nav {
-                display: inline-block;
-                height: 100vh;
-                position: fixed;
-                left: 0;
-            }
-            nav ul {
-                flex-direction: column;
-                width: 15em;
-            }
-            main {
-                width: calc(100% - 15em);
-            }
-            nav a {
-                width: 100%;
-            }
-            nav ul li:nth-child(4) {
-                margin-left: 0;
-            }
+            background: grey;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
-</nav>
+<main>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+</main>
 </body>
 </html>
