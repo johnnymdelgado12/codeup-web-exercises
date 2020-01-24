@@ -72,7 +72,8 @@ header a:hover {
 
 .header-background {
     background: purple;
-    display: grid;
+    grid-area: 1 / 1 / 2 / 6;
+
 
     /* TODO: define the grid area of this element to take up the entire first row of the .container grid  */
 }
@@ -118,6 +119,7 @@ nav a:hover {
     height: 200px;
     border-radius: 10px;
     position: relative;
+    transition: 2s
     /* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
 }
 
