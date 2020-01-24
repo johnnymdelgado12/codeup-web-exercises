@@ -1,0 +1,148 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5em repeat(3, 1fr) 4em .25em;
+    grid-template-areas:
+                        "nav nav nav"
+                        "menu content1 ads1"
+                        "menu content2 ads2"
+                        "menu content3 ads3"
+                        "footer footer footer"
+                        "bottom bottom bottom";
+    grid-column-gap: 10px;
+}
+
+.list1 {
+    display: inline-block;
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.inline {
+    display: inline-block;
+}
+
+
+
+.top-nav {
+    background: black;
+    font-family: sans-serif;
+    font-size: 40px;
+    text-decoration: none;
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    background: #4d4d4d;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: .5em;
+}
+
+.side-nav {
+    background: lightgray;
+    grid-area: menu;
+
+}
+
+.list2 {
+    text-decoration: none;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: black;
+
+}
+
+.sidemenu {
+    list-style: none;
+    align-content: space-evenly;
+}
+
+.space {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h2 {
+    color: #0fb784;
+    font-family: sans-serif;
+}
+
+.article1 {
+    grid-area: content1;
+}
+
+.article2 {
+    grid-area: content2;
+}
+
+.article3 {
+    grid-area: content3;
+}
+
+.ad1 {
+    grid-area: ads1;
+}
+
+.ad2 {
+    grid-area: ads1;
+}
+
+.ad3 {
+    grid-area: ads2;
+}
+
+.ad4 {
+    grid-area: ads2;
+}
+
+.ad5 {
+    grid-area: ads3;
+}
+
+.ad6 {
+    grid-area: ads3;
+}
+
+footer {
+    background: #757575;
+    color: white;
+    font-family: sans-serif;
+    padding: 1em;
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+}
+
+.power {
+    display: flex;
+    align-items: center;
+    background: #3d3d3d;
+    color: white;
+    font-family: sans-serif;
+    padding: 1em;
+    grid-area: bottom;
+}
+
+.w3 {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
