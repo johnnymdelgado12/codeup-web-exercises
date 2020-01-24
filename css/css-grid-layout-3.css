@@ -1,0 +1,100 @@
+body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+                        "header header header header"
+                        "aside content3 content4 content4"
+                        "aside content5 content5 content6"
+                        "aside content7 content8 content9"
+                        "aside footer footer footer";
+
+
+
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.div1 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: header;
+}
+
+.div2 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: aside;
+}
+
+.div3 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: content3;
+}
+
+.div4 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: content4;
+}
+
+.div5 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: content5;
+}
+
+.div6 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: content6;
+}
+
+.div7 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: content7;
+}
+
+.div8 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: content8;
+}
+
+.div9 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: content9;
+}
+
+.div10 {
+    background: gold;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    grid-area: footer;
+}
