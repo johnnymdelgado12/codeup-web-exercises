@@ -3,11 +3,11 @@
 }
 
 body {
-    background: mediumpurple;
+    background: #ff00ea;
     color: white;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: linear-gradient(135deg, mediumpurple, lightblue);
+    background-image: linear-gradient(135deg, #ff00ea, #00f2ff);
 }
 
 .wrapper {
@@ -29,7 +29,7 @@ ul {
 }
 
 header {
-    background: purple;
+    background: black;
     grid-area: 1 / 2 / 2 / 5;
     /* TODO: define the grid area of header such that it takes up the first row and middle three columns */
 }
@@ -67,11 +67,11 @@ header ul li:nth-of-type(2) {
 
 header a:hover {
     background: white;
-    color: purple;
+    color: black;
 }
 
 .header-background {
-    background: purple;
+    background: black;
     grid-area: 1 / 1 / 2 / 6;
 
 
@@ -104,8 +104,8 @@ nav a {
 }
 
 nav a:hover {
-    background: white;
-    color: mediumpurple;
+    background: black;
+    color: #00f2ff;
 }
 
 .logo {
@@ -113,11 +113,11 @@ nav a:hover {
 }
 
 .card {
-    background: black;
+    background: #00f2ff;
     border: 3px solid lightgrey;
     width: 100%;
     height: 200px;
-    border-radius: 10px;
+    border-radius: 100px;
     position: relative;
     transition: 2s
     /* TODO: add a property that causes a transition of the border from lightgrey to near black in .2 seconds */
@@ -132,6 +132,7 @@ nav a:hover {
     height: 100%;
     width: 100%;
     display: flex;
+
 }
 
 .card i {

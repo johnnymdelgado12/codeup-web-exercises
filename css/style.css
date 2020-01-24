@@ -9,11 +9,15 @@
 
 h1 {
     text-align: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
     background-color: #889493;
-    font-family: "PT Serif", "Times New Roman" , sans-serif;
+    font-family: 'Orbitron', sans-serif;
 
 }
 
@@ -45,12 +49,18 @@ ul {
     background-color: black;
 }
 
+.companyVision {
+    display: flex;
+    justify-content: center;
+
+}
+
 #vision {
     text-align: center;
 }
 
 #pics {
-    margin-left: 310px;
+
 }
 
 table td{

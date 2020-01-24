@@ -1,0 +1,49 @@
+body {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 1.5fr repeat(4, 1fr) 1fr;
+    grid-template-rows: .75fr repeat(4, 1fr) .5fr;
+    grid-template-areas:
+                "header header header header header header"
+                "nav article article article article ads"
+                "nav article article article article ads"
+                "nav article article article article ads"
+                "nav article article article article ads"
+                "nav footer footer footer footer footer";
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.header {
+    background: gold;
+    padding: 10px;
+    grid-area: header;
+}
+
+.article {
+    background: gold;
+    padding: 10px;
+    grid-area: article;
+}
+
+.nav {
+    background: gold;
+    padding: 10px;
+    grid-area: nav;
+}
+
+.ads {
+    background: gold;
+    padding: 10px;
+    grid-area: ads;
+}
+
+.footer {
+    background: gold;
+    padding: 10px;
+    grid-area: footer;
+}
+
+
+
