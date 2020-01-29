@@ -1,0 +1,54 @@
+#main-jumbotron {
+    background-image: url("../img/pizza.png");
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.jumbotron {
+
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.card-header {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #3B94D9;
+    color: white;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#crust-name1 {
+    background-color: #bebfcc;
+}
+
+#crust-name2 {
+    background-color: #bebfcc;
+}
+
+.form-check {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
