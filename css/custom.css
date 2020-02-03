@@ -8,8 +8,26 @@
 
 }
 
-.jumbotron {
+.btn-outline-success {
+    border-color: #bebfcc;
+    color: gray;
+}
 
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.container {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#jumbotron-container {
+    padding: 0;
+}
+
+.display-4 {
+    background: #ffffff91;
 }
 
 h1 {
@@ -59,6 +77,14 @@ h1 {
     background-color: #bebfcc;
 }
 
+#sauce-type1 {
+    background-color: #bebfcc;
+}
+
 #meat-type {
+    background-color: #bebfcc;
+}
+
+#veggie-type {
     background-color: #bebfcc;
 }
