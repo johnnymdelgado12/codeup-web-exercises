@@ -1,18 +1,18 @@
 "use strict"
-
-console.log("Hello from external Javascript");
-
+//
+// console.log("Hello from external Javascript");
+//
 // alert("Welcome To My Website!");
-
+//
 // var color = prompt("Whats your favorite color?")
 //
 // alert("Great, " + color + " is my favorite color too!!!")
-
-// var lmRental = prompt("How long would you like to rent this movie for?");
 //
-// var brbRental = prompt("How long would you like to rent this movie for?");
+// var lmRental = prompt("How long would you like to rent The Little Mermaid for?");
 //
-// var herRental = prompt("How long would you like to rent this movie for?");
+// var brbRental = prompt("How long would you like to rent Brother Bear for?");
+//
+// var herRental = prompt("How long would you like to rent Hercules for?");
 //
 // var totalPrice =  (lmRental * 3 ) + (brbRental * 3) + (herRental * 3);
 //
@@ -34,24 +34,51 @@ console.log("Hello from external Javascript");
 //
 // alert("Your total pay comes out to " + "$" + totalPay)
 
-var classCapacity = prompt("How many students are enrolled in the class?")
-
-var classStartTime = prompt("What time is your first class?")
-
-// var classFull = classCapacity < 20;
+// var classCapacity = prompt("How many students are enrolled in the class?")
 //
-// var classAtSameTime = classStartTime === 8;
+// var classStartTime = prompt("What time is your first class?")
+//
+//
+// var canEnroll = classCapacity < 20 && classStartTime != 8
+//
+// if (canEnroll === true) {
+//     alert("You can enroll in the course!")}
+//
+// else
+// {
+//     alert("Sorry, you can not enroll in the course at this time.")
+//
+// }
+//
+//
+//
+// var classIsNotFull = confirm("Class is not full");
+//
+// var noScheduleConflicts = confirm("Schedules do not conflict");
+//
+// var studentEnrollment = classIsNotFull && noScheduleConflicts
+//
+// alert("Student can enroll: " + studentEnrollment)
 
-var canEnroll = classCapacity < 20 && classStartTime !== 8
 
-if (canEnroll === true) {
-    alert("You can enroll in the course!")}
 
-else
-{
-    alert("Sorry, you can not enroll in the course at this time.")
+//class registration instructor walkthrough
 
-}
+
+
+var numberOfItems = Number(prompt("How many items are you buying?"));
+
+var offerIsValid = confirm("Is the offer valid?");
+
+var isPremiumMember = confirm("Are you a premium member?");
+
+var discountAppliedStatus = offerIsValid && (isPremiumMember || numberOfItems >= 2);
+
+alert("Can use discount " + discountAppliedStatus);
+
+
+
+
 
 
 
