@@ -10,7 +10,7 @@
  */
 
 function sayHello(name) {
-    return "Hello, " + name
+    return "Hello, " + name + "!"
 }
 
 
@@ -81,25 +81,27 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-// function calculateTip(tip, bill) {
-//     return bill * tip;
-//
-// }
-//
-// var billAmount = prompt("How much was your meal?")
-//
-// var tipAmount = prompt("How much would you like to tip?")
-//
-//
-// /**
-//  * TODO:
-//  * Use prompt and alert in combination with your calculateTip function to
-//  * prompt the user for the bill total and a percentage they would like to tip,
-//  * then display the dollar amount they should tip
-//  */
-//
-//
-// alert(calculateTip(billAmount, tipAmount))
+function calculateTip(tip, bill) {
+    return bill * tip;
+
+}
+
+
+
+/**
+ * TODO:
+ * Use prompt and alert in combination with your calculateTip function to
+ * prompt the user for the bill total and a percentage they would like to tip,
+ * then display the dollar amount they should tip
+ */
+
+
+var billAmount = parseFloat(prompt("How much was your meal?"))
+
+
+var tipAmount = parseFloat(prompt("How much would you like to tip?"))
+
+alert(" You should tip an amount of $" +calculateTip(billAmount.toFixed(2), tipAmount).toFixed(2))
 
 
 /**
@@ -127,7 +129,7 @@ var originalPrice = Number(prompt("How much was your total price?"));
 
 var discountApplied = Number(prompt("How much was the discount?"));
 
-alert("Your total bill is " + "$" + applyDiscount (originalPrice, discountApplied))
+alert("Your total bill is " + "$" + applyDiscount (originalPrice, discountApplied) + " with your discount")
 
 
 
