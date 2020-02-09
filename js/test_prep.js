@@ -153,4 +153,4 @@ function colorSwitch(color) {
     return colorMessage
 }
 
-console.log(colorSwitch("cyan"));
+console.log(colorSwitch("blue"));
