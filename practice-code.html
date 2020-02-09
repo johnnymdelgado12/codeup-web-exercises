@@ -1,3 +1,5 @@
+</html><!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>I love Trix & Luna!</title>
@@ -9,331 +11,134 @@
     <p id="blog-post">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eius nobis qui ratione sit? Blanditiis consequuntur cum dolorem ducimus ea eveniet facilis impedit laudantium minus natus officiis perspiciatis quibusdam, ut!</p>
 </div>
 
+
 <script>
-    "use strict";
+    "use strict"
+    function helloWorld(num) {
+       if ((num % 3 === 0) && (num % 5 === 0)) {
+            return "hello " + "world";
+        } else if(num % 3 === 0) {
+            return "hello"
+        } else if (num % 5 === 0){
+            return "world"
+        }
 
-    console.log("hello from conditionals lec.js!");
+   }
 
-    // ================ REAL WORLD SCENARIO ================
-    // If a user is an admin,show a specific navbar
-    // If weather is rainy, show rain icon
-    // If number of lives is 0, game is over
-
-
-    // ================ IF STATEMENT SYNTAX ================
-
-    // if(condition){
-    // code here runs if condition evaluates to true
-    // }
+    console.log(helloWorld(15));
 
 
-    // ================ IF STATEMENT EXAMPLES ================
-    //TODO Together: Show a specific navbar if user is admin
-    //TODO Together: Send a 20% off coupon if its users birthday
-    //TODO Together: Write an if statement that alerts "It's raining" if isRainy is true
-    //TODO Together: Write an if statement that alerts the user whether or not they have enough money to buy a new item. Assume there are no hidden fees or taxes.
+    // Define a function named isString that takes in any input and returns true if the input provided is a string.
+    function isString (input) {
+        return  typeof input === "string";
+
+    }
+
+
+    console.log(isString(false));
+
+    // Define a function named notAString that takes in any input and returns true if the input provided is not a string.
+    function notAString(input) {
+        return input !== "string"
+
+    }
 
 
 
-    // //TODO: Write an if statement that alerts "Sorry, game over" if numberOfLives is 0
-    //
-    // var lives = 0
-    //
-    // if (lives  === 0) {
-    //     alert("Sorry, game over!");
-    // }
-    //
-    //
-    // //TODO: Write an if statement that alerts "It's snowing!" if weather is equal to "snowing"
-    //
-    // var isSnowing = true
-    //
-    // if (isSnowing) {
-    //     alert("It's Snowing");
-    // }
-    //
-    // //TODO: Write an if statement that alerts true if numberInput is greater than but not equal to 10
-    //
-    // var number = 11
-    //
-    // if (number > 10 ) {
-    //     alert("true");
-    // }
-    //
-    //
-    // //TODO: EXTRA BONUS - Refactor each of the previous statements as functions.
-    //
-    // function gameOver(lives) {
-    //     if (lives === 0) {
-    //         alert("Sorry, game over")
+    console.log(notAString(true));
+
+    //Define a function named isOdd that takes in a single input. If the input is an odd number or a string containing an odd number, return true. Any other input should return false.
+
+
+    // function isOdd(input) {
+    //     if (typeof input === "string" || input % 2 !== 0){
+    //         return true;
+    //     }else {
+    //     return false;
     //     }
     // }
+    function isOdd(input){
+        return input % 2 !== 0 || parseFloat(input) % 2 !== 0;
+    }
+
+    console.log(isOdd(4));
+
+    // function isOdd(input){
+    //     return parseInt(input ) % 2 !== 0
+    // }
+
+
+    //In this challenge, you must verify the equality of two different
+    // given parameters: a and b.
+    //     Both the value and the type of parameters need to be tested in order to have an matching equality. The possible types of the given parameters are:
+    // Numbers
+    // Strings
+    // Booleans (false or true)
+    // Special values: undefined, null and NaN
+    // What have you learnt so far that will permit you to do two different checks (value and type) with a single statement?
+    //     Implement a function that returns true if the parameters are equal, and false if they are different.
+
+
+
+
+    function areEquals(inputA, inputB) {
+        return inputA === inputB
+    }
+
+    console.log(areEquals(true, true));
+
+
+
+    // Create a function that takes two numbers as arguments
+    // and return their sum.
+
+
+    function sumOf(x,y){
+        return parseFloat(x) + parseFloat(y)
+    }
+
+    console.log(sumOf(42.7, 50.2));
+
+
+    function notNotNot(n, input) {
+        return (((n % 2 === 0) && (input === true))|| (n % 2 !== 0) && (input === false));
+    }
+
+    console.log(notNotNot(1, false))
+
+
+
+    //Truthy or Falsy?
+    //A value is said to be "truthy" if it evaluates to true in a Boolean context. All values are truthy in JavaScript unless they're one of the following:
+    // false
+    // null
+    // undefined
+    // 0
+    // NaN
+    // ""
     //
-    // gameOver(1)
-
-
-
-    // =============== IF / ELSE SYNTAX ================
-
-    // if(condition){
-    //     // code here runs if condition evaluates to true
-    // } else {
-    //     // code here runs if condition evaluates to false
-    // }
-
-
-
-    // =============== IF / ELSE STATEMENT EXAMPLES ================
-    //TODO Together: Show a specific navbar if user is admin, else show a different navbar
-
-    var isAdmin = true
-
-    if(isAdmin) {
-        console.log("displaying Admin Navbar");
-    } else {
-        console.log("displaying regular navbar");
-    }
-
-
-
-
-    //TODO Together: Write an if statement that alerts "It's raining" if isRainy is true, else return "have a nice day!"
-
-    var isRaining = false
-
-    if(isRaining) {
-        alert("Its Raining!")
-    } else {
-        // alert("Have a nice day!")
-    }
-
-
-    //TODO: Write an if statement that alerts "Sorry, game over" if numberOfLives is 0, else alert "Next Level!"
-
-    var numberOfLives = 1
-
-    if (numberOfLives === 0 ) {
-        alert("Sorry, game over!");
-    } else {
-        // alert("Next Level!");
-    }
-
-    //TODO: Write an if statement that alerts "It's snowing!" if weather is equal to "snowing", else alert "Check back later for more details!"
-
-    var weather = "snowing"
-
-    if(weather === "snowing") {
-        alert("It's Snowing!")
-    } else {
-        alert("Check back later for more details!");
-    }
-
-    //TODO: Write an if statement that alerts true if numberInput is greater than 10, else alert "the number is less than 10"
-
-    var number = 9
-
-    if(number > 10) {
-        alert("The number is greater than 10!");
-    } else {
-        // alert("The number is NOT greater than 10!");
-    }
-
-
-    //TODO: Refactor todo#1 as a function named checkIfGameIsOver, that accepts numberOfLives and returns "Sorry, game over" if numberOfLives is 0, else return "Next Level!.
-
-    (function checkIfGameIsOver(lives) {
-        if (lives === 0 ) {
-            alert("Sorry, game over!");
-        } else {
-            // alert("Next Level!");
-        }
-    })(1)
-
-
-
-    //TODO: EXTRA BONUS - Refactor todo#2 from above as a function.
-    // (function isItRaining("raining") {
-    //     if("raining") {
-    //         alert("Its Raining!")
-    //     } else {
-    //         alert("Have a nice day!")
-    //     }
-    // })("raining")
-
-
-
-    // SHOULD WE DELETE STUFF EXAMPLE
-
-
-
-
-    //TODO: Write a confirm asking the user if they are 13 years of age or older. If they are, alert "You may proceed", if they are not, alert "Sorry, you are not able to proceed"
-
-    // ================ IF / ELSE IF / ELSE STATEMENT SYNTAX ===============
-    // if(condition1){
-    //     // code here runs if condition evaluates to true
-    // }else if (condition2){
-    //     // code here runs if condition1 is false *and* condition2 evaluates to true
-    // }else {
-    //     // code here gets executed if condition1 nor condition2 evaluate to true
-    // }
-
-
-
-    // =============== IF / ELSE IF/ELSE STATEMENT EXAMPLES ================
-    //TODO Together: Write an if/else if/else statement that alerts "It's snowing!" if weather is equal to "snowing", alerts "It's raining" if weather is equal to "raining", alerts "have a nice day" for all other cases
-
-    var weather = "snowing"
-
-    if(weather === "snowing") {
-        // alert("It's snowing!");
-    } else if(weather === "It's raining!") {
-        // alert("It's raining")
-    } else {
-        alert("Have a nice day!")
-    }
-
-
-    //TODO Together: refactor the above statement as a function
-
-    function checkWeather(weather) {
-        if (weather === "snowing") {
-            return "It's Snowing!"
-        } else if(weather === "raining") {
-            return "It's raining!"
-        } else {
-            return "Have a nice day!"
-        }
-    }
-
-    console.log(checkWeather("raining"));
-
-    // Together: PIZZA PREFERENCE EXAMPLE
-
-    // var pizzaPreference = prompt("What kind of pizza do you like?");
-    // console.log("User pizza input: " + pizzaPreference);
+    // In JavaScript, an empty object and an empty array are both considered "truthy," but an empty string is considered false when evaluated as a Boolean (this behavior is what we call "falsey").
     //
-    // if (pizzaPreference === "pineapple and hot sauce") {
-    //     alert("What a coincidence, that's my favorite!");
-    // } else if (pizzaPreference === "cheese") {
-    //     alert("Just plain cheese? Okay...");
-    // }  else if (pizzaPreference === "ham"){
-    //     alert("Ham is easy to spell and awesome!");
-    // } else {
-    //     alert(pizzaPreference + " isn't my favorite, but let's order some!");
-    // }
+    // Create a function that takes an argument of any data type and returns 1 if it's truthy and 0 if it's falsy.
 
-    var pizzaPreferece = (prompt("What kind of pizza do you like?")).toLocaleLowerCase();
-    console.log(("User pizza prefrence: " + pizzaPreferece));
 
-    if (pizzaPreferece === "pineapple and hot sauce") {
-        alert("What a coincidence, I love that one too!");
-    } else if (pizzaPreferece === "cheese") {
-        alert("Just plain cheese? Okay..");
-    } else if (pizzaPreferece === "ham") {
-        alert("Ham is easy to spell and awesome!");
-    } else {
-        alert(pizzaPreferece + " isn't my favorite, but lets order some!");
+    function truthyFalsy(input) {
+        return Boolean(input) === true ? 1 : 0;
     }
 
 
-    //TODO: Write a function that accepts a string that is a traffic light color as an input. When this function is called, it should return a message informing the user what to do when approaching that color light at an intersection.
+    console.log(truthyFalsy(false));
 
 
-    function checkTrafficLightColor(trafficLightColor) {
-        if (trafficLightColor === "green") {
-            return "Just go right on through!";
-        } else if (trafficLightColor === "yellow") {
-            return "You better start slowing down!";
-        } else if (trafficLightColor === "red")
-            return "you need to stop!";
 
+    function seconds(minutes, hours) {
+        return parseInt(minutes * 60) + parseInt(hours * 3600)
     }
-    console.log(checkTrafficLightColor("red"));
 
+    console.log(seconds(30, 2));
 
-    // ================ NESTED STATEMENTS ===============
-    //TODO Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license.
-
-
-
-
-
-
-
-    // ================ TERNARY STATEMENT ================
-
-    //TODO Together: Regular way
-
-    // var message;
-    // var success = true;
-    //
-    // if (success) {
-    //     message = "Operation was successful.";
-    // } else {
-    //     message = "Oops, something went wrong.";
-    // }
-    // console.log(message);
-
-
-    // var success = true;
-    // var message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
-    // console.log(message)
-
-
-    //TODO: Refactor the following conditional as a ternary
-
-    // var weather = "sunny";
-    // var weatherMessage;
-
-    // if(weather === "rainy"){
-    //    weatherMessage = "It's raining!";
-    // } else {
-    //     weatherMessage = "Have a nice day!";
-    // }
-
-    //WRITE YOUR TERNARY STATEMENT HERE!
-
-
-
-    // =============== SWITCH STATEMENT ================
-    //TODO Together:
-
-    // var pizzaPreference = prompt("What kind of pizza do you like?");
-    //
-    // switch(pizzaPreference) {
-    //     case "pineapple and hot sauce":
-    //         alert("What a coincidence, that's my favorite!");
-    //         break;
-    //     case "cheese":
-    //         alert("Just plain cheese? Okay...");
-    //         break;
-    //     default:
-    //         alert(pizzaPreference + " isn't my favorite, but let's order some!");
-    //         break;
-    // }
-
-
-    //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
-
-
-    //TODO: Rewrite the intersection function from earlier as a switch statement.
-
-
-
-    // ================ REVERSE ENGINEERING =================
-    // Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
-
-
-    // 1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
-
-
-    // 2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
-
-
-    // 3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
 
 </script>
 </body>
-</html><!DOCTYPE html>
-<html lang="en">
+
+

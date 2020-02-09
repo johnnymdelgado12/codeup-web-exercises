@@ -17,33 +17,69 @@
  *
  */
 
-var verify = confirm("Would you like to enter a number?")
+// var verify = confirm("Would you like to enter a number?")
+//
+// if (verify === true){
+//
+//     var promptedNumber = Number(prompt("What is your number?"));
+//     var numberPlusHundred = promptedNumber + 100;
+//     var oddEven = promptedNumber % 2 === 0;
+//     var positiveNegative = promptedNumber > 0;
+//
+//     if(oddEven === true) {
+//         alert("Your number is even!")
+//         alert("Your number plus 100 is: " + numberPlusHundred)
+//     } else {
+//         alert("Your number is odd")
+//         alert("Your number plus 100 is: " + numberPlusHundred)
+//     }
+//
+//     if(positiveNegative === true) {
+//         alert("Your number is positive")
+//     } else {
+//         alert("Your number is negative")
+//     }
+//
+// } else {
+//     alert("To bad")
+// }
 
-if (verify === true){
+var willContinue = confirm("Would you like to enter a number?")
+var isNum = !isNaN(willContinue)
 
-    var promptedNumber = Number(prompt("What is your number?"));
-    var numberPlusHundred = promptedNumber + 100;
-    var oddEven = promptedNumber % 2 === 0;
-    var positiveNegative = promptedNumber > 0;
 
-    if(oddEven === true) {
-        alert("Your number is even!")
-        alert("Your number plus 100 is: " + numberPlusHundred)
-    } else {
-        alert("Your number is odd")
-        alert("Your number plus 100 is: " + numberPlusHundred)
-    }
 
-    if(positiveNegative === true) {
-        alert("Your number is positive")
-    } else {
-        alert("Your number is negative")
-    }
 
-} else {
-    alert("To bad")
-}
 
+
+//instructor walkthrough
+
+// var willContinue = confirm("Would you like to enter a number?")
+//
+// if(willContinue) {
+//     //prompt for a number
+//     var userInput = prompt("What number would you like to enter?")
+//
+//     var isNum = !isNaN(userInput);
+//
+//     if(isNum) { // isNum is true
+//                 // we know we have a real number
+//         if(userInput % 2 === 0) {
+//             alert("number is even")
+//         } else {
+//             alert("Number is odd")
+//         }
+//         var userNum = parseFloat(userInput);
+//         alert("your number plus 100 = " + (userNum + 100));
+//     } if(userInput < 0) {
+//         alert("your number is negative")
+//     } else if ( userInput > 0) {
+//         alert("your number is positive")
+//     }
+// }else {
+//     alert("That is not a number")
+//
+// }
 
 
 
@@ -69,19 +105,19 @@ if (verify === true){
  */
 
 
-// function analyzeColor (color) {
-//     if (color === "blue") {
-//         return "blue is the color of the sky"
-//     } else if (color === "red"){
-//         return "strawberries are red"
-//     } else if (color === "cyan") {
-//         return "I don't know anything about cyan"
-//     } else {
-//         return "That is not a color I know about"
-//     }
-// }
+function analyzeColor (color) {
+    if (color === "blue") {
+        return "blue is the color of the sky"
+    } else if (color === "red"){
+        return "strawberries are red"
+    } else if (color === "cyan") {
+        return "I don't know anything about cyan"
+    } else {
+        return "That is not a color I know about"
+    }
+}
 
-// console.log(analyzeColor("blue"));
+console.log(analyzeColor("blue"));
 
 
 // Don't change the next two lines!
@@ -235,7 +271,7 @@ function calculateTotal(luckyNumbers){
     var fiftyPercentDiscount = originalPrice - (originalPrice * .5);
     var free = originalPrice - originalPrice
     var noDiscount = "Sorry no discount, "
-    var finalPrice
+    var finalPrice = ""
     switch (luckyNumbers) {
         case 1:
             finalPrice = "your price is $" + tenPercentDiscount + " with your discount!";
@@ -257,4 +293,5 @@ function calculateTotal(luckyNumbers){
     return finalPrice;
 }
 
-console.log(calculateTotal(luckyNumber));
+// console.log(calculateTotal(luckyNumber));;
+alert(calculateTotal(luckyNumber))
