@@ -154,3 +154,53 @@ function colorSwitch(color) {
 }
 
 console.log(colorSwitch("blue"));
+
+/**
+* TODO:
+    * Suppose there's a promotion in Walmart, each customer is given a randomly
+* generated "lucky number" between 0 and 5. If your lucky number is 0 you have
+* no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
+* the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
+* all for free!.
+*
+* Write a function named `calculateTotal` that accepts a lucky number and total
+* amount, and returns the discounted price.
+*
+* Example:
+* calculateTotal(0, 100) // returns 100
+* calculateTotal(4, 100) // returns 50
+* calculateTotal(5, 100) // returns 0
+*
+* Test your function by passing it various values and checking for the expected
+* return value.
+    */
+
+
+
+function calculateTotal(luckyNumber,totalAmount) {
+    var discountRate = parseFloat(0);
+    switch (luckyNumber) {
+        case 0:
+            discountRate = parseFloat(0);
+            break;
+        case 1:
+            discountRate = parseFloat(.10);
+            break;
+        case 2:
+            discountRate = parseFloat(.25);
+            break;
+        case 3:
+            discountRate = parseFloat(.35);
+            break;
+        case 4:
+            discountRate = parseFloat(.5);
+            break;
+        case 5:
+            discountRate = parseFloat(1)
+            break;
+    }
+    return totalAmount - (discountRate * totalAmount)
+}
+
+console.log(calculateTotal(4, 100));
+
