@@ -15,7 +15,7 @@
      * array.
      */
 
-    console.log(names);
+    console.log(names.length);
 
     /**
      * TODO:
@@ -75,7 +75,7 @@
     console.log(secoondItem(names));
 
     function lastItem(names) {
-        return names.slice(-1)[0];
+        return names [names.length -1];
     }
 
     console.log(lastItem(names));
