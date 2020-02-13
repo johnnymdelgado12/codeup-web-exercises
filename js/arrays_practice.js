@@ -51,11 +51,48 @@
 
 
 
-function showMultiplicationTable(num) {
-    for (var i = 1; i <= 10; i++) {
-        var product = num * i;
-        console.log(num + " X " + i + " = " + product);
-    }
-}
+// function showMultiplicationTable(num) {
+//     for (var i = 1; i <= 10; i++) {
+//         var product = num * i;
+//         console.log(num + " X " + i + " = " + product);
+//     }
+// }
+//
+// console.log(showMultiplicationTable(5));
 
-console.log(showMultiplicationTable(5));
+
+// * TODO:
+// * Write some JavaScript that uses a `confirm` dialog to ask the user if they
+//     * would like to enter a number. If they click 'Ok', prompt the user for a
+//     * number, then use 3 separate alerts to tell the user:
+//     *
+// * - whether the number is even or odd
+// * - what the number plus 100 is
+// * - if the number is negative or positive
+// *
+// * if what the user enters is not a number, use an alert to tell them that, and
+// * do *not* display any of the above information.
+// *
+// * Can you refactor your code to use functions?
+// *
+// */
+
+var willContinue = confirm("Would you like to enter a number?");
+
+if (willContinue){
+    var userInput = parseFloat(prompt("What is your number?"));
+    var isNum = !isNaN(userInput);
+    if (isNum){
+        } if (userInput % 2 === 0){
+            alert("Your number is even!")
+        } else {
+            alert("Your number is odd!")
+        } if (userInput > 0) {
+            alert("Your number is positive!")
+        } else {
+        alert("your number is is negative!")
+    }
+} else {
+    alert("that is not a number!")
+}
+    alert("Your number + 100 is " + ((userInput) + (100)));

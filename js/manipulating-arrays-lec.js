@@ -95,7 +95,7 @@
         // We can also use indexOf on arrays!
 
         // TODO: Find the index of the first occurrence of 'Kraft American Singles'
-    console.log(cheeses.indexOf("kraft American Singles"));
+    console.log(cheeses.indexOf("Kraft American Singles"));
 
     // Now I can locate the index of an element even if I'm not looking at it!
 
