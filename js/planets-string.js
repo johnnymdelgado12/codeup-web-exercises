@@ -33,13 +33,13 @@
     console.log(newString);
 
 
-    var listLoopString = '<ul>'
+    var listLoopString = '<ul>';
     planetsArray.forEach(function (planet) {
         listLoopString += '<li>';
             listLoopString += planet;
         listLoopString += '</li>'
     });
-    listLoopString += '</ul>'
+    listLoopString += '</ul>';
     console.log(listLoopString);
 
     var listString = '<li><li></li>' +planetsArray.join('</li><li>') + '</li></ul>';
