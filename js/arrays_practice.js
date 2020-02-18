@@ -76,23 +76,23 @@
 // * Can you refactor your code to use functions?
 // *
 // */
-
-var willContinue = confirm("Would you like to enter a number?");
-
-if (willContinue){
-    var userInput = parseFloat(prompt("What is your number?"));
-    var isNum = !isNaN(userInput);
-    if (isNum){
-        } if (userInput % 2 === 0){
-            alert("Your number is even!")
-        } else {
-            alert("Your number is odd!")
-        } if (userInput > 0) {
-            alert("Your number is positive!")
-        } else {
-        alert("your number is is negative!")
-    }
-} else {
-    alert("that is not a number!")
-}
-    alert("Your number + 100 is " + ((userInput) + (100)));
+//
+// var willContinue = confirm("Would you like to enter a number?");
+//
+// if (willContinue){
+//     var userInput = parseFloat(prompt("What is your number?"));
+//     var isNum = !isNaN(userInput);
+//     if (isNum){
+//         } if (userInput % 2 === 0){
+//             alert("Your number is even!")
+//         } else {
+//             alert("Your number is odd!")
+//         } if (userInput > 0) {
+//             alert("Your number is positive!")
+//         } else {
+//         alert("your number is is negative!")
+//     }
+// } else {
+//     alert("that is not a number!")
+// }
+//     alert("Your number + 100 is " + ((userInput) + (100)));
