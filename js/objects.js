@@ -63,14 +63,25 @@
     //
 
 
+    // shoppers.forEach(function (shopper) {
+    //     if (shopper.amount >= 200){
+    //         var appliedDiscount = shopper.amount - (shopper.amount.toFixed(2) * .12);
+    //         console.log(appliedDiscount);
+    //     } else {
+    //         console.log(shopper.amount);
+    //     }
+    // });
+
+
     shoppers.forEach(function (shopper) {
-        if (shopper.amount >= 200){
-            var appliedDiscount = shopper.amount - (shopper.amount.toFixed(2) * .12);
-            console.log(appliedDiscount);
+        if (shopper.amount >= parseFloat(200)){
+            var apppledDiscount = shopper.amount - (shopper.amount * parseFloat(.12));
+            console.log(apppledDiscount);
         } else {
             console.log(shopper.amount);
         }
     });
+
 
 
     /** TODO:
@@ -88,8 +99,48 @@
 
 
     var books = [
-        {title: }
-    ]
+        {
+            title: "Harry Potter",
+            author: {
+                firstName: "J.K.",
+                lastName: "Rowling",
+            }
+        },
+        {
+            title: "The Dark Tower",
+            author:{
+                firstName: "Stephen",
+                lastName: "King",
+            },
+
+        },
+        {
+            title: "A Game Of Thrones",
+            author:{
+                firstName: "George",
+                lastName: "Martin",
+            },
+
+        },
+        {
+            title: "Lord Of The Rings",
+            author:{
+                firstName: "J.R.R.",
+                lastName: "Tolken",
+            },
+        },
+
+        {
+           title: "Moby Dick",
+           author:{
+               firstName: "Herman",
+               lastName: "Melville",
+           },
+
+        }
+    ];
+
+    console.log(books[3]);
 
 
     /**
@@ -116,6 +167,16 @@
      *      ---
      *      ...
      */
+
+
+
+    for (var i = 0; i < books.length; i++) {
+        console.log("Book # " + (i + 1) + "\nTitle: " + books[i].title + "\nAuthor: " + books[i].author.firstName + " " + books[i].author.lastName);
+    }
+
+
+
+
 
     /**
      * Bonus:
