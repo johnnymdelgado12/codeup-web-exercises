@@ -74,11 +74,12 @@
 
 
     shoppers.forEach(function (shopper) {
-        if (shopper.amount >= parseFloat(200)){
-            var apppledDiscount = shopper.amount - (shopper.amount * parseFloat(.12));
-            console.log(apppledDiscount);
+        if (shopper.amount > parseFloat(200)){
+            var appliedDiscount = shopper.amount - (shopper.amount * parseFloat(.12));
+            var returnMessage = "Shopper " + shopper.name + " has earned a 12% discount by having a cart total of $" + shopper.amount.toFixed(2) + ". The original total was $" + shopper.amount.toFixed(2) + " and the new amount is  $" + appliedDiscount.toFixed(2) + "!"
+            console.log(returnMessage);
         } else {
-            console.log(shopper.amount);
+            console.log("Shopper " + shopper.name + " did not spend more than $200, They owe $" + shopper.amount.toFixed(2) );
         }
     });
 
@@ -170,10 +171,12 @@
 
 
 
-    for (var i = 0; i < books.length; i++) {
-        console.log("Book # " + (i + 1) + "\nTitle: " + books[i].title + "\nAuthor: " + books[i].author.firstName + " " + books[i].author.lastName);
-    }
 
+
+
+    books.forEach(function (book, index) {
+        console.log("Book #" + (index + 1) + "\n Title: " + book.title + "\n Author: " + book.author.firstName + book.author.lastName)
+    });
 
 
 
@@ -188,5 +191,13 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, author){
+        for (var i = 0; i < books.length; i++) {
+            console.log("Book # " + (i + 1) + "\nTitle: " + books[i].title + "\nAuthor: " + books[i].author.firstName + " " + books[i].author.lastName);
+        };
+    }
+
+    console.log(createBook());
 
 })();
