@@ -21,7 +21,6 @@
         age: 2,
         date_of_birth: new Date("2/6/2018")
     };
-
     // We can access the properties but using the following syntax.
     console.log(kamea.age);
 
