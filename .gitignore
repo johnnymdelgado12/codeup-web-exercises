@@ -1,4 +1,5 @@
 .idea/*
 *.iml
 .DS_STORE
-js/ignore.assesmentnotes
+*js/ignore.assesmentnotes
+*js/keys.js

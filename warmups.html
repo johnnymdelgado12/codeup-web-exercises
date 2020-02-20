@@ -12,73 +12,176 @@
 
 
     <script>
-        function helloWorld() {
-            return "Hello World!";
-        }
+        // function helloWorld() {
+        //     return "Hello World!";
+        // }
+        //
+        // console.log(helloWorld());
+        //
+        // function quotient(a, b) {
+        //     return a / b;
+        // }
+        //
+        // console.log(quotient(10, 2));
+        //
+        // function helloName(name) {
+        //  return "Hello, " + name;
+        // }
+        //
+        // console.log(helloName("Johnny"))
+        //
+        // function calculateRetangleArea(width, length) {
+        //     return width * length
+        // }
+        //
+        // console.log(calculateRetangleArea( 2, 2));
+        //
+        // function arrayLength(arrayInput){
+        //     return arrayInput.length
+        // }
+        //
+        // console.log(arrayLength([1,2,3,4]));
+        //
+        // function seven() {
+        //     return  7;
+        // }
+        //
+        // console.log(seven());
+        //
+        // function firstItem(inputArray) {
+        //     return inputArray[0];
+        // }
+        //
+        // console.log(firstItem(["cat", "dog", "fish", "Cow"]));
+        //
+        // function determineType(type) {
+        //     return typeof(type)
+        // }
+        //
+        // console.log(determineType(7));
+        // console.log(determineType(true));
+        // console.log(determineType("cat"));
+        //
+        //
+        // // Write a function that returns true or false based off whether the number passed, squared, is evenly divisible by 3.
+        //
+        // function squaredNumDivisibleByThree(num) {
+        //     return (num * num) % 3 === 0;
+        // }
+        //
+        // console.log(squaredNumDivisibleByThree(3));
+        //
+        //
+        // //Write a function called isString that accepts a single input, and returns true of the data type is a string or false if it is not a string
+        // function isString(input){
+        //     return typeof input === "string";
+        // }
+        //
+        // console.log(isString(true));
+        // console.log(isString("hello"));
 
-        console.log(helloWorld());
+        // Loop through the following array of Reindeer objects and return an array of Reindeer objects that are "gold" reindeer
+        var reindeerList = [
+            {
+                name: "Dot",
+                age: 5,
+                isGold: false
+            },
+            {
+                name: "Dasher",
+                age: 8,
+                isGold: true
+            },
+            {
+                name: "Patch",
+                age: 2,
+                isGold: false
+            },
+            {
+                name: "Rocket",
+                age: 6,
+                isGold: false
+            },
+            {
+                name: "Dancer",
+                age: 9,
+                isGold: true
+            },
+            {
+                name: "Prancer",
+                age: 5,
+                isGold: true
+            },
+            {
+                name: "Groot",
+                age: 9,
+                isGold: false
+            },
+            {
+                name: "Vixen",
+                age: 9,
+                isGold: true
+            },
+            {
+                name: "Comet",
+                age: 11,
+                isGold: true
+            },
+            {
+                name: "Archie",
+                age: 3,
+                isGold: false
+            },
+            {
+                name: "Cupid",
+                age: 13,
+                isGold: true
+            },
+            {
+                name: "Donder",
+                age: 16,
+                isGold: true
+            },
+            {
+                name: "Boots",
+                age: 16,
+                isGold: false
+            },
+            {
+                name: "Blizten",
+                age: 16,
+                isGold: true
+            }
+        ];
 
-        function quotient(a, b) {
-            return a / b;
-        }
+    //FOR LOOP EXAMPLE:
 
-        console.log(quotient(10, 2));
-
-        function helloName(name) {
-         return "Hello, " + name;
-        }
-
-        console.log(helloName("Johnny"))
-
-        function calculateRetangleArea(width, length) {
-            return width * length
-        }
-
-        console.log(calculateRetangleArea( 2, 2));
-
-        function arrayLength(arrayInput){
-            return arrayInput.length
-        }
-
-        console.log(arrayLength([1,2,3,4]));
-
-        function seven() {
-            return  7;
-        }
-
-        console.log(seven());
-
-        function firstItem(inputArray) {
-            return inputArray[0];
-        }
-
-        console.log(firstItem(["cat", "dog", "fish", "Cow"]));
-
-        function determineType(type) {
-            return typeof(type)
-        }
-
-        console.log(determineType(7));
-        console.log(determineType(true));
-        console.log(determineType("cat"));
+    // function getGoldReindeer (reindeerArray){
+    //     var rainDeer = [];
+    //     for(var i = 0; i < reindeerArray.length; i ++) {
+    //         if (reindeerArray[i].isGold === true) {
+    //             rainDeer.push(reindeerArray[i]);
+    //         }
+    //     }
+    //     return rainDeer
+    //     }
+    //
+    //     console.log(getGoldReindeer(reindeerList));
 
 
-        // Write a function that returns true or false based off whether the number passed, squared, is evenly divisible by 3.
+    //FOR EACH LOOP EXAMPLE:
 
-        function squaredNumDivisibleByThree(num) {
-            return (num * num) % 3 === 0;
-        }
+    function getGoldReindeer(reindeerArray){
+        var bucket = [];
+        reindeerArray.forEach(function (deer) {
+            if(deer.isGold === true){
+                bucket.push(deer)
+            }
+        });
+        return bucket;
+    }
 
-        console.log(squaredNumDivisibleByThree(3));
-
-
-        //Write a function called isString that accepts a single input, and returns true of the data type is a string or false if it is not a string
-        function isString(input){
-            return typeof input === "string";
-        }
-
-        console.log(isString(true));
-        console.log(isString("hello"));
+        console.log(getGoldReindeer(reindeerList));
 
     </script>
 </body>
