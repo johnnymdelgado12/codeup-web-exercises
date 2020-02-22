@@ -114,22 +114,22 @@
 // 1.  Write a function, `filterNumbers()` that takes in an array of mixed data types and returns an array of only the numbers type in ascending order.
 
         // filterNumbers(["fred", true, 5, 3]); //[3, 5]
-
-function filterNumbers(array){
-    let numberArray = [];
-    array.forEach(function (num) {
-        if (num === !isNaN()){
-            numberArray.push(parseFloat(num))
-        }
-    });
-    return numberArray
-};
-
-console.log(filterNumbers(["fred", true, 5, 3]));
+//
+// function filterNumbers(array){
+//     let numberArray = [];
+//     array.forEach(function (num) {
+//         if (num === !isNaN()){
+//             numberArray.push(parseFloat(num))
+//         }
+//     });
+//     return numberArray
+// };
+//
+// console.log(filterNumbers(["fred", true, 5, 3]));
 
 // function filterNumbers(array) {
 //     let numberArray = [];
-//     for (let i = 0; numberArray.length < 0; i++) {
+//     for (let i = 0; i < array.length; i++) {
 //         if (array !== isNaN()) {
 //             numberArray[i].push(array);
 //         }
@@ -142,29 +142,38 @@ console.log(filterNumbers(["fred", true, 5, 3]));
 // 2. Write a function, `getOlder()` that takes in array of dog objects and increases the value of the age properties by 1.
 
 
-    // var pets:
-    //
-    //    [
-    //     {
-    //          name: "Chompers",
-    //          breed: "Pug",
-    //          age: 7,
-    //      },
-    //      {
-    //          name: "Freddy",
-    //          breed: "Lab",
-    //          age: 4
-    //      },
-    //      {
-    //          name: "Mr. Pig",
-    //          breed: "Mastif",
-    //          age: 10
-    //      }
-    //  ];
-    //
+    var pets =
+
+       [
+        {
+             name: "Chompers",
+             breed: "Pug",
+             age: 7
+         },
+         {
+             name: "Freddy",
+             breed: "Lab",
+             age: 4
+         },
+         {
+             name: "Mr. Pig",
+             breed: "Mastiff",
+             age: 10
+         }
+     ];
 
 
-   // ```
+function getOlder(dogAge) {
+    var bucket = [];
+    dogAge.forEach(function (petAge) {
+        bucket.push({name:petAge.name, breed:petAge.breed, age:++petAge.age});
+    });
+    return bucket
+}
+
+console.log(getOlder(pets));
+
+// ```
    //  ```js
    //  //Example output
    //   [
@@ -188,31 +197,43 @@ console.log(filterNumbers(["fred", true, 5, 3]));
 
 // 3. Write a function, `washCars()` that takes in a array of car objects and sets the boolean properties of isDirty to false
 
-    // ```js
-    //         // Example input
-    //         [
-    //              {
-    //                  make: 'Volvo',
-    //                  color: 'red',
-    //                  year: 1996,
-    //                  isDirty: true
-    //              },
-    //              {
-    //                  make: 'Toyota',
-    //                  color: 'black',
-    //                  year: 2004,
-    //                  isDirty: false
-    //              },
-    //              {
-    //                  make: 'Ford',
-    //                  color: 'white',
-    //                  year: 2007,
-    //                  isDirty: true
-    //              }
-    //         ]
-    //   ```
-    //
-    // ```js
+
+            var cars =
+            [
+                 {
+                     make: 'Volvo',
+                     color: 'red',
+                     year: 1996,
+                     isDirty: true
+                 },
+                 {
+                     make: 'Toyota',
+                     color: 'black',
+                     year: 2004,
+                     isDirty: false
+                 },
+                 {
+                     make: 'Ford',
+                     color: 'white',
+                     year: 2007,
+                     isDirty: true
+                 }
+            ];
+
+
+            function washCars(carArray){
+                var bucket = [];
+                carArray.forEach(function (car) {
+                    if (car.isDirty){
+                        bucket.push({make:car.make,color:car.color, year:car.year, isDirty: car = false})
+                    }
+                });
+                return bucket
+            }
+
+console.log(washCars(cars));
+
+// ```js
     //         // Example output:
     //          [
     //              {
