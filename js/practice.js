@@ -115,22 +115,22 @@
 
         // filterNumbers(["fred", true, 5, 3]); //[3, 5]
 //
-// function filterNumbers(array){
-//     let numberArray = [];
-//     array.forEach(function (num) {
-//         if (num === !isNaN()){
-//             numberArray.push(parseFloat(num))
-//         }
-//     });
-//     return numberArray
-// };
-//
-// console.log(filterNumbers(["fred", true, 5, 3]));
+function filterNumbers(array){
+    let numberArray = [];
+    array.forEach(function (num) {
+        if (num !== isNaN()){
+            numberArray.push(num);
+        }
+    });
+    return numberArray.sort();
+};
+
+console.log(filterNumbers(["fred", true, 5, 3]));
 
 // function filterNumbers(array) {
 //     let numberArray = [];
 //     for (let i = 0; i < array.length; i++) {
-//         if (array !== isNaN()) {
+//         if (array === isNaN()) {
 //             numberArray[i].push(array);
 //         }
 //         return numberArray
@@ -225,7 +225,9 @@ console.log(getOlder(pets));
                 var bucket = [];
                 carArray.forEach(function (car) {
                     if (car.isDirty){
-                        bucket.push({make:car.make,color:car.color, year:car.year, isDirty: car = false})
+                        bucket.push({make:car.make,color:car.color, year:car.year, isDirty:car = false})
+                    } else if (car.isDirty === false){
+                        bucket.push({make:car.make,color:car.color, year:car.year, isDirty:car.isDirty})
                     }
                 });
                 return bucket
@@ -258,24 +260,37 @@ console.log(washCars(cars));
     // ```
 
 // 4. Write a function, `adminList()` that takes in an array of user objects and returns a count of all admins based on the isAdmin property. Refactor to return an array of admin-only user emails. Refactor again to return an array of user objects that are admins.
-//     ```js
-//          //Example Input:
-//           [
-//              {
-//                  isAdmin: true,
-//                  email: 'user1@email.com'
-//              },
-//              {
-//                  isAdmin: true,
-//                  email: 'user2@email.com'
-//              },
-//              {
-//                  isAdmin: false,
-//                  email: 'user3@email.com'
-//              }
-//          ];
-//     ```
-//
+
+        var admins =
+          [
+             {
+                 isAdmin: true,
+                 email: 'user1@email.com'
+             },
+             {
+                 isAdmin: true,
+                 email: 'user2@email.com'
+             },
+             {
+                 isAdmin: false,
+                 email: 'user3@email.com'
+             }
+         ];
+
+
+        function adminList(adminArray) {
+            var trueAdmins=[];
+            adminArray.forEach(function (admin) {
+                if (admin.isAdmin === true){
+                    trueAdmins.push(admin);
+                }
+            });
+            return trueAdmins.length
+        }
+
+console.log(adminList(admins));
+
+
 //     ```js
 //        // Example Output (before refactor): 2
 //
@@ -303,25 +318,35 @@ console.log(washCars(cars));
 
 // 5. Create a function, `makeSandwichObjects()` that takes in two array of strings, breads and fillings and returns an array of sandwichObjects that contain properties for bread and filling and values correspond to the same order of the two passed in arrays. Assume the two array inputs are the same length.
 
-    // ```js
-    //     //     Example Input:
-    //
-    //      var breads  = [
-    //          "white",
-    //          "wheat",
-    //          "rhy",
-    //          "white"
-    //      ];
-    //
-    //      var fillings = [
-    //          "pb&j",
-    //          "ham",
-    //          "cheese steak",
-    //          "tuna"
-    //      ];
+
+
+         var breads  = [
+             "white",
+             "wheat",
+             "rhy",
+             "white"
+         ];
+
+         var fillings = [
+             "pb&j",
+             "ham",
+             "cheese steak",
+             "tuna"
+         ];
+
+
+    function makeSandwichObjects(sandwiches){
+        var bucket = [];
+        sandwiches.forEach(function (sandwich) {
+
+        })
+
+    }
+
+
     //
     //      makeSandwichObjects(breads, fillings) // example call to the function
-    // ```
+    //
     // ```js
     //     // Example Output:
     //        [
