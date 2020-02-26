@@ -5,10 +5,31 @@
     <title>jQuery</title>
 </head>
 <body>
+    <h1 id="heading">jQuery!</h1>
+    <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam aliquid beatae eligendi, esse explicabo fuga incidunt ipsum
+        labore laboriosam magni minus necessitatibus nisi perspiciatis quam quas quo quod quos!
+    </p>
+    <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam aliquid beatae eligendi, esse explicabo fuga incidunt ipsum
+        labore laboriosam magni minus necessitatibus nisi perspiciatis quam quas quo quod quos!
+    </p>
+    <p class="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam aliquid beatae eligendi, esse explicabo fuga incidunt ipsum
+        labore laboriosam magni minus necessitatibus nisi perspiciatis quam quas quo quod quos!
+    </p>
+    <ul id="list">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li id="important">item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
 <script src="js/jquery-warmup.js"></script>
-<script>
+<script type="text/javascript">
+    "use strict";
     $(document).ready(function () {
-        alert("The DOM has finished loading!")
+        alert($('#heading').html());
+        $('.codeup').css('border', '1px solid red').css('background-color','blue');
+        $('li').css('font-size', '20px').css('background-color', 'green');
+
     })
 </script>
 </body>
