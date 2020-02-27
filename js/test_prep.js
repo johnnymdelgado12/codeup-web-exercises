@@ -54,7 +54,7 @@
 // //need to confirm user wants to enter number
 // var willContinue = confirm("Would you like to enter a number?")
 //
-// //need to make sure inoput is a number
+// //need to make sure input is a number
 // function isNumfunc(numInput) {
 //     return !isNaN(numInput);
 // }
