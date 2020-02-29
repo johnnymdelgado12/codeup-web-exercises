@@ -2,10 +2,27 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: black;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Press Start 2P', sans-serif;
+            color: white;
+        }
+        #nes{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
-<h1>Konami Code</h1>
-
+<h1>ENTER YOUR CODE</h1>
+<img id="nes" src="img/nes-controller.jpg" alt="contra-start screen">
 <script src="js/jquery-warmup.js"></script>
 <script>
     "use strict";
@@ -15,7 +32,25 @@
        code.push(event.keyCode);
         console.log(code);
         if (code.join(',') === [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13].join(',')){
-            alert('you have 30 lives!')
+            $('h1').html("YOU GOT 30 LIVES!");
+            var contraAudio = new Audio('sounds/ContraSFX.wav');
+            $('#nes').attr('src','img/contra%20.png');
+            contraAudio.play();
+        } else if (code.join(',') === [83, 85, 88, 88, 65, 85, 86, 83, 13].join(',')){
+            $('h1').html("INFINITE SPELL POINTS IN BATTLE!");
+            $('#nes').attr('src','img/final-fantasy-logo.png');
+            var ffAudio = new Audio('sounds/final-fantasy1-victory.mp3');
+            ffAudio.play();
+        } else if (code.join(',') === [65, 86, 86, 76, 65, 85, 83, 90, 13].join(',')){
+            $('h1').html("YOU ARE INVINCIBLE!");
+            $('#nes').attr('src', 'img/legend-of-zelda-nes-logo.jpeg');
+            var zeldaAudio = new Audio('sounds/zelda_secret_sound.mp3');
+            zeldaAudio.play();
+        } else if (code.join(',') === [48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 87, 70, 89, 53, 68, 87, 52, 48, 48, 48, 87, 72, 13].join(',')){
+            $('h1').html("INFINITE HP, MISSILES, AND ALL UPGRADES, PLUS NO SUIT, GO HAM!")
+            $('#nes').attr('src', 'img/metroid-title-screen.jpg');
+            var metroidAudio = new Audio('sounds/metroid_start.mp3');
+            metroidAudio.play();
         }
     });
     })
@@ -23,3 +58,6 @@
 </body>
 </html>
 
+
+
+<!--//SUXXAUVS-->
