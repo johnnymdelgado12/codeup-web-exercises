@@ -51,6 +51,11 @@
             $('#nes').attr('src', 'img/metroid-title-screen.jpg');
             var metroidAudio = new Audio('sounds/metroid_start.mp3');
             metroidAudio.play();
+        } else if (code.join(',') === [66, 65, 66, 65, 38, 40, 66, 65, 37, 39, 66, 65, 13].join(',')){
+            $('h1').html("COWABUNGA!");
+            $('#nes').attr('src', 'img/tmnt-arcade.jpg');
+            var tmntAudio = new Audio('sounds/tmnt-theme.mp3');
+            tmntAudio.play();
         }
     });
     })

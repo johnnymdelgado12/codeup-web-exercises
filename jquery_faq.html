@@ -40,7 +40,8 @@
     </dl>
     <script src="js/jquery-warmup.js"></script>
     <script>
-        $('dt').click(function () {
+        $('dt').click(function (e) {
+            e.preventDefault();
             $('dd').toggleClass('invisible');
             $(this).toggleClass('highlight');
         });
