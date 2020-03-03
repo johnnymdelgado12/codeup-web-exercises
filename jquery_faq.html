@@ -12,9 +12,23 @@
             background-color: cyan;
             font-weight: bold;
         }
+
+        .pic-frame {
+            height: 400px;
+            width: 400px;
+            border: 40px solid saddlebrown;
+
+        }
+
+        img {
+            height: 400px;
+            width: 400px;
+        }
     </style>
 </head>
 <body>
+    <h1 id="news-letter">Would you like to sign up for our news letter? <span>X</span></h1>
+    <h2>Would you like to register for the site?</h2>
     <h1>National Parks FAQ</h1>
     <dl>
         <dt>1. Who is the director of the National Park Service? </dt>
@@ -38,13 +52,105 @@
         <dt>10. What is the National Park Service budget?</dt>
         <dd class="invisible">FY 2017 Enacted: $2.932 billion</dd>
     </dl>
+
+    <h3 class="park-name">Hot Springs National Park</h3>
+    <ul class="park-list">
+        <li>The story of the hot springs in Hot Springs National Park begins with rocks that formed approximately 400 million years ago</li>
+        <li>In the early 1980s interpretive rangers at Hot Springs National Park began recording oral accounts from some of the bathing attendants and other employees of the various bathhouses in town. </li>
+        <li>Hot Springs National Park, nestled in the heart of the Ouachita Mountains is home to a diverse range of mammalian inhabitants, which range from tiny chipmunks to 400lb black bears.</li>
+        <li>In 1877 local mill owner Enoch Woolman built a wooden observation tower at the summit of Hot Springs Mountain to allow visitors to enjoy the view of the surrounding region.</li>
+    </ul>
+
+    <button type="submit" class="yellow">Click Me</button>
+
+    <h3 class="park-name">Guadalupe Mountains</h3>
+    <ul class="park-list">
+        <li>Guadalupe Mountains National Park protects the world's most extensive Permian fossil reef.</li>
+        <li>Guadalupe Mountains National Park provides high-elevation mixed-conifer habitat, mid-elevation riparian and canyon habitats, and low-elevation gypsum dune habitat. </li>
+        <li>Spring wildflowers in the Chihuahuan desert generally bloom later than those of the Sonoran or Mohave deserts, and tend to be ground-hugging perennials that hide among the rocks, grasses and other plants.</li>
+        <li>With over 5,000 feet in elevation change in the park including, mountain slopes with differing aspects, and high canyon walls, local conditions can be extremely variable.</li>
+    </ul>
+
+    <button type="submit" class="yellow">Click Me</button>
+
+    <h3 class="park-name">Garden Route National Park</h3>
+    <ul class="park-list">
+        <li>The part of the Wilderness Section which contains the Ebb & Flow Camp, the Serpentine and much of Langvlei originally formed part of the farm Kleinkranz, which was granted to JJ Viviers in 1818.</li>
+        <li>With the formation of the Lakes Area Board in 1975, the way was cleared for the identification and acquisition of suitable land for preservation</li>
+        <li>In 1983 the country's first national lake area was proclaimed at Wilderness.</li>
+        <li>On the south bank of the Serpentine where it joined the Touw, the Siesta Caravan Park was run by Jack Nixon in the nineteen sixties and seventies.</li>
+    </ul>
+
+    <button type="submit" class="yellow">Click Me</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="pic-frame" id="pic1">
+        <img src="img/hot-springs-park.jpeg" alt="hot springs national park entrance">
+        <button type="submit">Swap</button>
+    </div>
+
+    <div class="pic-frame" id="pic2">
+        <img src="img/guadalupe-mountains.jpg" alt="guadalupe mountain national park entrance">
+        <button type="submit">Swap</button>
+    </div>
+
+    <div class="pic-frame" id="pic3">
+        <img src="img/garden-route-park.jpeg" alt="garden ridge national park enterance">
+        <button type="submit">Swap</button>
+    </div>
+
     <script src="js/jquery-warmup.js"></script>
     <script>
-        $('dt').click(function (e) {
-            e.preventDefault();
-            $('dd').toggleClass('invisible');
-            $(this).toggleClass('highlight');
+        $('dt').click(function () {
+            $('dd').each(function () {
+                $(this).toggleClass('invisible');
+                $(this).toggleClass('highlight');
+            })
         });
+
+        $('.yellow').click(function () {
+            $('ul').each(function () {
+                $(this).children().last().css('background-color', 'yellow');
+            });
+        });
+
+        $('h3').click(function () {
+            $('h3').next().css('font-weight', 'bold');
+            $(this).next().slideToggle();
+            $(this).siblings('h3').next().slideUp();
+        });
+
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'blue')
+        });
+
+        $('span').click(function () {
+            $('#news-letter').hide()
+        });
+
+        $('ul').hide();
+
+        $('h2').hide(function () {
+            $(this).delay(8000).fadeIn()
+        });
+
+
+
+        // $('h3').click(function () {
+        //     $(this).next().slideToggle();
+        //     $(this).siblings('h3').next().slideUp();
+        //
+        // });
+
+
+        // toggleClass('invisible');
+        // $(this).toggleClass('highlight');
+        // });
+
+
     </script>
 </body>
 </html>
