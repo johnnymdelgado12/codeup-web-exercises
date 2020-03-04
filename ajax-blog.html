@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="css/ajax-blog.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="post"></div>
+
+    <script src="js/jquery-warmup.js"></script>
+    <script>
+        "use strict";
+        (function() {
+            $.get('data/blog.json').done(function (data) {
+                data.forEach(function (item) {
+                    $('#post').append('<div><h3 class="blog-title">' + item.title + '</h3>' + item.date + '<p>' + item.categories.join(', ') + '</p>' + '<p>' + item.content + '</p>' + '</div>')
+                })
+            })
+
+        })();
+    </script>
+</body>
+</html>
+
+

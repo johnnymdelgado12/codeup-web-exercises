@@ -10,8 +10,9 @@
 <body>
 
 <div class="jumbotron jumbotron-fluid title-background">
-    <div class="container">
-        <h1 class="display-4 d-flex justify-content-center store-name">Duke Tool Supply</h1>
+    <div class="container d-block text-center">
+        <img src="img/dukes-tools.png" alt="Duke Tool Supply logo" id="logo">
+<!--        <h1 class="display-4 d-flex justify-content-center store-name">Duke Tool Supply</h1>-->
     </div>
 </div>
 
@@ -54,9 +55,9 @@
             data.forEach(function (item) {
                 $('#insertProducts').append(
                     '<tr>' +
-                    '<th>' + item.title + '</th>' +
-                    '<th>' + item.quantity + '</th>' +
-                    '<th>' + item.price + '</th>' +
+                    '<th>' + item.title +  '</th>' +
+                    '<th>' + item.quantity +  '</th>' +
+                    '<th>$' + item.price +  '</th>' +
                     '<th>' + item.categories + '</th>' +
                     '</tr>'
                 )

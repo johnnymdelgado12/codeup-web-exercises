@@ -1,13 +1,12 @@
 body {
     background-image:url("../img/hvac-tools.jpg");
 }
-
-.store-name {
-    font-family: 'Saira Stencil One', cursive;
+.jumbotron {
+    height: 15em ;
 }
 
 .title-background {
-    background-color: red;
+    background-color: #9f1111;
     margin-bottom: 0;
 }
 
