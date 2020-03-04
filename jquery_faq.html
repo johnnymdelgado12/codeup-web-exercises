@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Jquery Methods</title>
     <style>
+
+        #title{
+            text-align: center;
+        }
+
         .invisible {
             visibility: hidden;
         }
@@ -16,7 +21,13 @@
         .pic-frame {
             height: 400px;
             width: 400px;
-            border: 40px solid saddlebrown;
+            border: 20px solid saddlebrown;
+
+        }
+
+        .images-container {
+            display: flex;
+            justify-content: space-evenly;
 
         }
 
@@ -24,12 +35,13 @@
             height: 400px;
             width: 400px;
         }
+
     </style>
 </head>
 <body>
     <h1 id="news-letter">Would you like to sign up for our news letter? <span>X</span></h1>
     <h2>Would you like to register for the site?</h2>
-    <h1>National Parks FAQ</h1>
+    <h1 id="title">National Parks FAQ</h1>
     <dl>
         <dt>1. Who is the director of the National Park Service? </dt>
         <dd class="invisible">David Vela is the Deputy Director, exercising the authority of the Director of the National Park Service.</dd>
@@ -87,19 +99,21 @@
     <br>
     <br>
     <br>
-    <div class="pic-frame" id="pic1">
-        <img src="img/hot-springs-park.jpeg" alt="hot springs national park entrance">
-        <button type="submit">Swap</button>
-    </div>
+    <div class="images-container">
+        <div class="pic-frame">
+            <img src="img/hot-springs-park.jpeg" alt="hot springs national park entrance" id="pic1">
+            <button type="submit" class="swap" id="btn1">Swap</button>
+        </div>
 
-    <div class="pic-frame" id="pic2">
-        <img src="img/guadalupe-mountains.jpg" alt="guadalupe mountain national park entrance">
-        <button type="submit">Swap</button>
-    </div>
+        <div class="pic-frame">
+            <img src="img/guadalupe-mountains.jpg" alt="guadalupe mountain national park entrance" id="pic2">
+            <button type="submit" class="swap" id="btn2">Swap</button>
+        </div>
 
-    <div class="pic-frame" id="pic3">
-        <img src="img/garden-route-park.jpeg" alt="garden ridge national park enterance">
-        <button type="submit">Swap</button>
+        <div class="pic-frame">
+            <img src="img/garden-route-park.jpeg" alt="garden ridge national park entrance" id="pic3">
+            <button type="submit" class="swap" id="btn3">Swap</button>
+        </div>
     </div>
 
     <script src="js/jquery-warmup.js"></script>
@@ -134,21 +148,23 @@
         $('ul').hide();
 
         $('h2').hide(function () {
-            $(this).delay(8000).fadeIn()
+            $(this).delay(8000).fadeIn(2000)
         });
 
 
+        $('#btn1').click(function () {
+                $('#pic1').attr('src', 'img/guadalupe-mountains.jpg');
+                $('#pic2').attr('src', 'img/garden-route-park.jpeg');
+                $('#pic3').attr('src', 'img/hot-springs-park.jpeg');
+        })
 
-        // $('h3').click(function () {
-        //     $(this).next().slideToggle();
-        //     $(this).siblings('h3').next().slideUp();
-        //
-        // });
+        $('#btn2').click(function () {
+                $('#pic2').attr('src', 'img/hot-springs-park.jpeg');
+        })
 
 
-        // toggleClass('invisible');
-        // $(this).toggleClass('highlight');
-        // });
+
+
 
 
     </script>
