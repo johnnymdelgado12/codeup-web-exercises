@@ -40,7 +40,7 @@ var popup2 = new mapboxgl.Popup(popupOptions)
 var markerOptions2 = {
     zoom: 20,
     color: "#5ae6ce"
-}
+};
 
 var marker2 = new mapboxgl.Marker(markerOptions2)
     .setLngLat([-98.3970,29.5293])
@@ -58,7 +58,7 @@ var popup3 = new mapboxgl.Popup(popupOptions)
 var markerOptions3 = {
     zoom: 20,
     color: "#f2ff3b"
-}
+};
 
 var marker3 = new mapboxgl.Marker(markerOptions3)
     .setLngLat([-98.5001,29.4934])

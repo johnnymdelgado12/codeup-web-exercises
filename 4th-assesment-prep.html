@@ -1,0 +1,178 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8"/>-->
+<!--    <title>Assessment 3 Review</title>-->
+<!--    <style>-->
+<!--        h1 {-->
+<!--            color: magenta;-->
+<!--        }-->
+
+<!--        .runner {-->
+<!--            width: 20%;-->
+<!--            height: 10%;-->
+<!--            background-color: green;-->
+<!--        }-->
+
+<!--        body {-->
+<!--            background-size: cover;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1 class="jogger">I don't like this color</h1>-->
+
+<!--<div class="runner">-->
+<!--    <h3>You'll never catch me</h3>-->
+<!--</div>-->
+
+<!--<input type="text" id="input">-->
+<!--<button id="add-btn">Click to add</button>-->
+<!--<ul id="add-to-me">-->
+<!--    <li>First item</li>-->
+<!--    <li>Second item</li>-->
+<!--    <li>Third item</li>-->
+<!--</ul>-->
+
+<!--<p id="thundercats"><span>Thunder</span> <span>Thunder</span> <span>Thundercats</span> <span>HOOOOOOOO!!!!!!</span></p>-->
+<!--<button id="get-hype">Get Hype</button>-->
+<!--</body>-->
+<!--<script src=js/jquery-warmup.js>-->
+<!-- <script src="assessment-three-review.js"></script>-->
+<!--<script>-->
+<!--    "use strict";-->
+
+<!--    //Write a function that changes the text color of the <h1> when the <h1> is clicked-->
+
+<!--    // $('h1').click(function () {-->
+<!--    //     $(this).css('color', 'blue')-->
+<!--    // });-->
+
+<!--    $('.jogger','.runner').click(function () {-->
+<!--        $(this).css('color', 'red')-->
+<!--    });-->
+
+<!--    //Hard mode: Change the text color to either Blue, Yellow or Red if the b, y or r keys are pressed-->
+
+<!--    //Write a function that causes the runner div to move to the right side of the screen when the mouse moves over it-->
+
+<!--    // $('.runner').mouseenter(function () {-->
+<!--    //     $(this).css('margin-left', 'auto')-->
+<!--    // });-->
+
+<!--    // $('.runner').mouseenter(function () {-->
+<!--    //     $(this).css('margin-left', 'auto')-->
+<!--    // });-->
+
+
+<!--    //Hard mode: Have the div go to the other side of the screen regardless of where it is.-->
+
+<!--    //Write a function to take the value from the input and append the value onto the ul with the id of add-to-me.-->
+<!--    //-->
+<!--    // $('#add-btn').click(function () {-->
+<!--    //     // var myList = $('#input').val();-->
+<!--    //     $('#add-to-me').append('<li>' + $('#input').val() + '</li>')-->
+<!--    //     $('#input').val("");-->
+<!--    // });-->
+
+<!--    $('')-->
+
+<!--    //Hard mode: when you click on an li move it from it's current location to the top of the ul-->
+
+<!--    //Write a function that changes the font of all text to comic sans 5 seconds after the page loads-->
+
+<!--    // $('*').delay(5000).queue(function () {-->
+<!--    //     $(this).css('font-family', 'Comic Sans MS')-->
+<!--    // });-->
+<!--    //-->
+<!--    // setTimeout(function () {-->
+<!--    //     $('body').css('color', 'purple')-->
+<!--    // }, 1000);-->
+
+<!--    //Hard mode: Change the background to this image after 10 seconds. https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?cs=srgb&dl=black-and-white-laptop-2740956.jpg&fm=jpg-->
+
+<!--    //Write a function that bolds the words in the paragraph element with the id of thundercats when the get hype button is pressed-->
+
+<!--    // $('#get-hype').click(function () {-->
+<!--    //     $('#thundercats').css('font-weight', 'bold')-->
+<!--    // });-->
+
+<!--    //Hard mode: Bold one word every time the button is pressed-->
+
+<!--</script>-->
+<!--</html>-->
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <style>-->
+<!--        #foo {-->
+<!--            background-color: red;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1 class="foo">Codeup Rocks!</h1>-->
+<!--<script src="/js/jquery-warmup.js"></script>-->
+<!--<script>-->
+<!--    "use strict";-->
+
+<!--    $(document).ready(function() {-->
+<!--        $('.foo').css('background-color', 'blue');-->
+<!--    });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example jQuery Page</title>
+</head>
+<body>
+<h1 id="codeup">Hello Codeup</h1>
+
+<script src="js/jquery-warmup.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        $('#codeup').hover(
+            function() {
+                $(this).css('background-color', '#FF0');
+            },
+            function() {
+                $(this).css('background-color', '#FFF');
+            }
+        );
+    });
+</script>
+</body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title></title>-->
+<!--    <meta charset="utf8">-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1 id="user_display">show the input here with button click</h1>-->
+<!--<input id="user_input">-->
+<!--<button id="clickme">click me</button>-->
+
+<!--<script src="js/jquery-warmup.js"></script>-->
+<!--<script type="text/javascript">-->
+<!--    "use strict";-->
+<!--    // vanilla js-->
+<!--    // document.getElementById("clickme").addEventListener('click',function(){-->
+<!--    //     document.getElementById('user_display').innerHTML = document.getElementById("user_input").value;-->
+<!--    // },false);-->
+
+<!--    $('#clickme').click(function(){-->
+<!--        $('#user_display').html($('#user_input').val());-->
+<!--    });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
