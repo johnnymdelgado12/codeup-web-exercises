@@ -1,0 +1,63 @@
+body {
+    background-color: #31255a;
+}
+#map {
+    width: 100%;
+    height: 500px;
+}
+.navbar {
+    background-color: #8fe0ff;
+}
+.icons {
+    height: 75px;
+    width: 75px;
+    margin: 20px auto auto;
+}
+.card-container {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+.card {
+    margin: auto;
+    height: 300px;
+}
+.card-text {
+    text-align: center;
+    color: 	#31255a;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.today {
+    text-align: center;
+    font-weight: bold;
+    color: #31255a;
+}
+
+.tomorrow {
+    text-align: center;
+    font-weight: bold;
+    color: #31255a;
+}
+
+.next-day {
+    text-align: center;
+    font-weight: bold;
+    color: #31255a;
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #31255a;
+    font-size: 30px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+
+
+
+
+
+}

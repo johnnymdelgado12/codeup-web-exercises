@@ -6,35 +6,7 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css" />
-    <style>
-        body {
-            background-color: #31255a;
-        }
-        #map {
-            width: 100%;
-            height: 500px;
-        }
-        .navbar {
-            background-color: #8fe0ff;
-        }
-        .icons {
-            height: 75px;
-            width: 75px;
-            margin: auto;
-        }
-        .card-container {
-            margin-top: 2em;
-            margin-bottom: 3em;
-        }
-        .card {
-            margin: auto;
-            height: 300px;
-        }
-        .card-text {
-            text-align: center;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
 <!-- Image and text -->
@@ -43,25 +15,29 @@
         <img src="icons/clear-day2.gif" width="30" height="30" class="d-inline-block align-top" alt="gif of sun">
         Weather Project
     </a>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
 </nav>
 
-<div class="card-container d-flex justify-content-center">
-    <div class="card d-flex" style="width: 18rem; background-color: #a7bcf2;">
-        <img id="insert-pic-current" src="icons/clear-day.png" class="card-img-top icons" alt="current weather">
+<div class="card-container d-flex justify-content-center ">
+    <div class="card d-flex" style="width: 18rem; background-color: #a7bcf2;" id="get-weather-now">
+        <img id="insert-pic-current" src="" class="card-img-top icons" alt="current weather icon">
         <div class="card-body">
             <p class="card-text">Today's Forecast</p>
+            <p class="today"></p>
         </div>
     </div>
-    <div class="card" style="width: 18rem; background-color: #a7bcf2;">
-        <img id="insert-pic-next" src="icons/partly-cloudy.png" class="card-img-top icons" alt="current weather">
+    <div class="card" style="width: 18rem; background-color: #a7bcf2;" id="weather-tomorrow">
+        <img id="insert-pic-next" src="" class="card-img-top icons" alt="tomorrows weathe icon">
         <div class="card-body">
             <p class="card-text">Tomorrows Forecast</p>
+            <p class="tomorrow"></p>
         </div>
     </div>
-    <div class="card" style="width: 18rem; background-color: #a7bcf2;">
-        <img id="insert-pic-next-after" src="icons/rain.png" class="card-img-top icons" alt="current weather">
+    <div class="card" style="width: 18rem; background-color: #a7bcf2;" id="next-day-weather">
+        <img id="insert-pic-next-after" src="" class="card-img-top icons" alt="next days weather icon">
         <div class="card-body">
             <p class="card-text">Next Days Forecast</p>
+            <p class="next-day"></p>
         </div>
     </div>
 </div>

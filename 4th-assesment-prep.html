@@ -1,106 +1,150 @@
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8"/>-->
-<!--    <title>Assessment 3 Review</title>-->
-<!--    <style>-->
-<!--        h1 {-->
-<!--            color: magenta;-->
-<!--        }-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Assessment 3 Review</title>
+    <style>
+        h1 {
+            color: magenta;
+        }
 
-<!--        .runner {-->
-<!--            width: 20%;-->
-<!--            height: 10%;-->
-<!--            background-color: green;-->
-<!--        }-->
+        .runner {
+            width: 20%;
+            height: 10%;
+            background-color: green;
+        }
 
-<!--        body {-->
-<!--            background-size: cover;-->
-<!--        }-->
-<!--    </style>-->
-<!--</head>-->
-<!--<body>-->
-<!--<h1 class="jogger">I don't like this color</h1>-->
+        body {
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<h1>I don't like this color</h1>
 
-<!--<div class="runner">-->
-<!--    <h3>You'll never catch me</h3>-->
-<!--</div>-->
+<div class="runner">
+    <h3>You'll never catch me</h3>
+</div>
 
-<!--<input type="text" id="input">-->
-<!--<button id="add-btn">Click to add</button>-->
-<!--<ul id="add-to-me">-->
-<!--    <li>First item</li>-->
-<!--    <li>Second item</li>-->
-<!--    <li>Third item</li>-->
-<!--</ul>-->
+<input type="text" id="input">
+<button id="add-btn">Click to add</button>
+<ul id="add-to-me">
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ul>
 
-<!--<p id="thundercats"><span>Thunder</span> <span>Thunder</span> <span>Thundercats</span> <span>HOOOOOOOO!!!!!!</span></p>-->
-<!--<button id="get-hype">Get Hype</button>-->
-<!--</body>-->
-<!--<script src=js/jquery-warmup.js>-->
-<!-- <script src="assessment-three-review.js"></script>-->
-<!--<script>-->
-<!--    "use strict";-->
+<p id="thundercats"><span>Thunder</span> <span>Thunder</span> <span>Thundercats</span> <span>HOOOOOOOO!!!!!!</span></p>
+<button id="get-hype">Get Hype</button>
+</body>
+<script src=js/jquery-warmup.js>
+ <script src="assessment-three-review.js"></script>
+<script>
+    "use strict";
 
-<!--    //Write a function that changes the text color of the <h1> when the <h1> is clicked-->
+    // Write a function that changes the text color of the <h1> when the <h1> is clicked
 
-<!--    // $('h1').click(function () {-->
-<!--    //     $(this).css('color', 'blue')-->
-<!--    // });-->
-
-<!--    $('.jogger','.runner').click(function () {-->
-<!--        $(this).css('color', 'red')-->
-<!--    });-->
-
-<!--    //Hard mode: Change the text color to either Blue, Yellow or Red if the b, y or r keys are pressed-->
-
-<!--    //Write a function that causes the runner div to move to the right side of the screen when the mouse moves over it-->
-
-<!--    // $('.runner').mouseenter(function () {-->
-<!--    //     $(this).css('margin-left', 'auto')-->
-<!--    // });-->
-
-<!--    // $('.runner').mouseenter(function () {-->
-<!--    //     $(this).css('margin-left', 'auto')-->
-<!--    // });-->
+    $('h1').click(function () {
+        $(this).css('color', 'blue')
+    });
 
 
-<!--    //Hard mode: Have the div go to the other side of the screen regardless of where it is.-->
+ //Hard mode: Change the text color to either Blue, Yellow or Red if the b, y or r keys are pressed
 
-<!--    //Write a function to take the value from the input and append the value onto the ul with the id of add-to-me.-->
-<!--    //-->
-<!--    // $('#add-btn').click(function () {-->
-<!--    //     // var myList = $('#input').val();-->
-<!--    //     $('#add-to-me').append('<li>' + $('#input').val() + '</li>')-->
-<!--    //     $('#input').val("");-->
-<!--    // });-->
+    $('*').keydown(function (event) {
+        if (event.keyCode === 66){
+            $('h1').css('color', 'blue')
+        } else if (event.keyCode === 89){
+            $('h1').css('color', 'yellow')
+        } else if (event.keyCode === 82){
+            $('h1').css('color', 'red')
+        }
+    })
 
-<!--    $('')-->
+    // b-66 y-89 r-82
 
-<!--    //Hard mode: when you click on an li move it from it's current location to the top of the ul-->
+    //Write a function that causes the runner div to move to the right side of the screen when the mouse moves over it
 
-<!--    //Write a function that changes the font of all text to comic sans 5 seconds after the page loads-->
+    // $('.runner').mouseenter(function () {
+    //     $(this).css('margin-left', 'auto')
+    // });
 
-<!--    // $('*').delay(5000).queue(function () {-->
-<!--    //     $(this).css('font-family', 'Comic Sans MS')-->
-<!--    // });-->
-<!--    //-->
-<!--    // setTimeout(function () {-->
-<!--    //     $('body').css('color', 'purple')-->
-<!--    // }, 1000);-->
+    // $('.runner').mouseenter(function () {
+    //     $(this).css('margin-left', 'auto')
+    // });
 
-<!--    //Hard mode: Change the background to this image after 10 seconds. https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?cs=srgb&dl=black-and-white-laptop-2740956.jpg&fm=jpg-->
 
-<!--    //Write a function that bolds the words in the paragraph element with the id of thundercats when the get hype button is pressed-->
+    //Hard mode: Have the div go to the other side of the screen regardless of where it is.
 
-<!--    // $('#get-hype').click(function () {-->
-<!--    //     $('#thundercats').css('font-weight', 'bold')-->
-<!--    // });-->
+    var whereAreWe = 'left';
 
-<!--    //Hard mode: Bold one word every time the button is pressed-->
+    $('.runner').mouseenter(function () {
+        if (whereAreWe === 'left'){
+            $(this).css('margin-left', 'auto');
+            $(this).css('margin-right', '0');
+            whereAreWe = 'right'
+        } else if (whereAreWe = 'right'){
+            $(this).css('margin-right', 'auto');
+            $(this).css('margin-left', '0');
+            whereAreWe = 'left'
+        }
+    });
 
-<!--</script>-->
-<!--</html>-->
+    //Write a function to take the value from the input and append the value onto the ul with the id of add-to-me.
+    //
+    // $('#add-btn').click(function () {
+    //     // var myList = $('#input').val();
+    //     $('#add-to-me').append('<li>' + $('#input').val() + '</li>')
+    //     $('#input').val("");
+    // });
+
+
+
+    //Hard mode: when you click on an li move it from it's current location to the top of the ul
+
+    function moveLis(){
+        var whatWasClicked = $(this).text();
+
+        $(this).remove();
+        $("#add-to-me").prepend("<li>" + whatWasClicked + "</li>");
+
+        $("#add-to-me").children().first().bind("click", moveLis);
+    }
+
+    $("li").click(moveLis)
+
+
+    //Write a function that changes the font of all text to comic sans 5 seconds after the page loads
+
+    // $('*').delay(5000).queue(function () {
+    //     $(this).css('font-family', 'Comic Sans MS')
+    // });
+    //
+    // setTimeout(function () {
+    //     $('body').css('color', 'purple')
+    // }, 1000);
+
+    //Hard mode: Change the background to this image after 10 seconds. https://images.pexels.com/photos/2740956/pexels-photo-2740956.jpeg?cs=srgb&dl=black-and-white-laptop-2740956.jpg&fm=jpg
+
+    //Write a function that bolds the words in the paragraph element with the id of thundercats when the get hype button is pressed
+
+    // $('#get-hype').click(function () {
+    //     $('#thundercats').css('font-weight', 'bold')
+    // });
+
+    //Hard mode: Bold one word every time the button is pressed
+
+    var counter = 1;
+
+    $("#get-hype").click(function(){
+        $("#thundercats span:nth-child(" + counter + ")").css("font-weight", "bold");
+
+        counter++;
+    })
+
+
+</script>
+</html>
 
 <!--<!DOCTYPE html>-->
 <!--<html>-->
@@ -124,31 +168,31 @@
 <!--</body>-->
 <!--</html>-->
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Example jQuery Page</title>
-</head>
-<body>
-<h1 id="codeup">Hello Codeup</h1>
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Example jQuery Page</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1 id="codeup">Hello Codeup</h1>-->
 
-<script src="js/jquery-warmup.js"></script>
-<script>
-    "use strict";
+<!--<script src="js/jquery-warmup.js"></script>-->
+<!--<script>-->
+<!--    "use strict";-->
 
-    $(document).ready(function() {
-        $('#codeup').hover(
-            function() {
-                $(this).css('background-color', '#FF0');
-            },
-            function() {
-                $(this).css('background-color', '#FFF');
-            }
-        );
-    });
-</script>
-</body>
-</html>
+<!--    $(document).ready(function() {-->
+<!--        $('#codeup').hover(-->
+<!--            function() {-->
+<!--                $(this).css('background-color', '#FF0');-->
+<!--            },-->
+<!--            function() {-->
+<!--                $(this).css('background-color', '#FFF');-->
+<!--            }-->
+<!--        );-->
+<!--    });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
 
 <!--<!DOCTYPE html>-->
 <!--<html>-->
@@ -172,6 +216,184 @@
 <!--    $('#clickme').click(function(){-->
 <!--        $('#user_display').html($('#user_input').val());-->
 <!--    });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>DOM Review</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <div id="main">-->
+<!--        <input type="text" id="input">-->
+<!--        <button id="add-to-list">Add to List</button>-->
+
+<!--        <h4>Favorite Food:</h4>-->
+<!--        <ul id="favorite-food">-->
+<!--            <li>Ramen</li>-->
+<!--            <li>Sushi</li>-->
+<!--            <li>Curry</li>-->
+<!--        </ul>-->
+
+<!--        <h4 id="change-me">Change Me</h4>-->
+
+<!--        <h4>My Cohort: <span id="my-cohort"></span></h4>-->
+<!--        <input type="text" id="cohort-name">-->
+<!--        <button id="change-cohort">Update</button>-->
+
+<!--        <br>-->
+<!--        <button id="highlight">Highlight</button>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<script src="js/jquery-warmup.js"></script>-->
+<!--<script>-->
+<!--//     # Assessment Review-->
+<!--//     ### DOM Manipulation-->
+<!--//-->
+<!--//     Welcome to your DOM Assessment Review. This will test your knowledge of using-->
+<!--//     JavaScript to manipulate the DOM. During the assessment, you will also have-->
+<!--//     the option to use jQuery if you prefer.-->
+<!--//-->
+<!--//         Open up `dom-review.html` and follow the instructions:-->
+<!--//-->
+<!--//         - Allow the user to type in their favorite food into the input and append it-->
+<!--//     to the list once the button is clicked.-->
+<!--        $('#add-to-list').click(function () {-->
+<!--            $('#favorite-food').append('<li>' + $('#input').val() + '</li>')-->
+<!--        });-->
+<!--//-->
+<!--//     - When the heading 'Change Me' is double clicked, change its-->
+<!--//     background-color to purple.-->
+<!--        $('#change-me').dblclick(function () {-->
+<!--            $(this).css('background-color', 'purple')-->
+<!--        });-->
+<!--//-->
+<!--//     - Allow the user to input their cohort name. Once Update button is clicked,-->
+<!--//         the text should should update with the name of the cohort.-->
+<!--//-->
+<!--//         ```$xslt-->
+<!--// My Cohort: Fortuna-->
+<!--// ```-->
+<!--        $('#change-cohort').click(function () {-->
+<!--            $('#my-cohort').append('<span>' + $('#cohort-name').val() + '</span>')-->
+<!--        });-->
+<!--//-->
+<!--//     - When 'Highlight' button is clicked, change the background color of the-->
+<!--//       cohort name to yellow.-->
+
+<!--        $('#highlight').click(function () {-->
+<!--            $('#my-cohort').css('background-color', 'yellow')-->
+<!--        });-->
+<!--//-->
+<!--//     - Write some JavaScript that changes the background-color of the container to-->
+<!--//       pink after 3 seconds.-->
+
+<!--        $('.container').delay(3000).queue(function () {-->
+<!--            $(this).css('background-color', 'pink')-->
+<!--        });-->
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>DOM: Query and Modify</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<h1 id="main-header">Hello World!</h1>-->
+<!--<ul>-->
+<!--    <li data-dbid="1">Item 1</li>-->
+<!--    <li data-dbid="2">Item 2</li>-->
+<!--    <li data-dbid="3">Item 3</li>-->
+<!--    <li data-dbid="4">Item 4</li>-->
+<!--    <li data-dbid="5">Item 5</li>-->
+<!--</ul>-->
+<!--<h2 id="sub-header">Hello Again.</h2>-->
+<!--<p class="sub-paragraph">-->
+<!--    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do-->
+<!--    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim-->
+<!--    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+<!--    aliquip ex ea commodo consequat. Duis aute irure dolor in-->
+<!--    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla-->
+<!--    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in-->
+<!--    culpa qui officia deserunt mollit anim id est laborum.-->
+<!--</p>-->
+<!--<button id="btn1">Change the main header!</button>-->
+<!--<button id="btn2">Change the sub header to blue!</button>-->
+<!--<button id="btn3">Change the every other li to grey!</button>-->
+<!--<button id="btn4">Change the first li to blue!</button>-->
+<!--<button id="btn5">Change the paragraph</button>-->
+
+<!--<script>-->
+<!--    (function() {-->
+<!--        "use strict";-->
+<!--        // TODO: Uncomment next line and get the main header element by id-->
+
+<!--        var mainHeader = document.getElementById("main-header");-->
+
+<!--        // TODO: Set inner html of mainHeader to "JavaScript is Cool"-->
+<!--        // mainHeader.innerHTML = "JavaScript is Cool";-->
+<!--        document.getElementById("btn1").addEventListener("click", function(){-->
+<!--            mainHeader.innerHTML = "JavaScript is Cool";-->
+<!--        });-->
+
+<!--        // TODO: Uncomment the next line and get the sub header element by id-->
+<!--        var subHeader = document.getElementById("sub-header");-->
+
+<!--        // TODO: Set the text color of subHeader to blue-->
+<!--        // subHeader.style.color = "blue";-->
+<!--        document.getElementById("btn2").addEventListener("click", function(){-->
+<!--            subHeader.style.color = "blue";-->
+<!--        });-->
+
+<!--        // TODO: Uncomment the next line and get all list items-->
+<!--        var listItems = document.getElementsByTagName("li") ;-->
+
+<!--        // TODO: Set text color on every other list item to grey-->
+<!--        document.getElementById("btn3").addEventListener("click", function(){-->
+<!--            for(var i = 1; i < listItems.length; i=i+2){-->
+<!--                listItems [i].style.color = "grey";-->
+<!--            }-->
+<!--        });-->
+<!--        //without a button-->
+<!--        // for(var i = 1; i < listItems.length; i=i+2){-->
+<!--        //    listItems [i].style.color = "grey";-->
+<!--        // }-->
+
+<!--        // // TODO: Set text color of li with dbid = 1 to blue-->
+<!--        document.getElementById("btn4").addEventListener("click", function(){-->
+<!--            for(var x = 0; x < listItems.length; x++) {-->
+<!--                if (listItems[x].getAttribute("data-dbid") ==1){-->
+<!--                    listItems[x].style.color = "blue";-->
+<!--                }-->
+<!--            }-->
+<!--        });-->
+
+<!--        //without a button-->
+<!--        //     for(var x = 0; x < listItems.length; x++) {-->
+<!--        //     if (listItems[x].getAttribute("data-dbid") ==1){-->
+<!--        //             listItems[x].style.color = "blue";-->
+<!--        //     }-->
+<!--        // }-->
+
+<!--        // TODO: Uncomment the next line and get all elements with class name sub-paragraph-->
+<!--        var subParagraphs = document.getElementsByClassName("sub-paragraph");-->
+
+<!--        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"-->
+<!--        document.getElementById("btn5").addEventListener("click", function() {-->
+<!--            subParagraphs[0].innerHTML = "Mission Accomplished";-->
+<!--        });-->
+<!--    })();-->
+
+
 <!--</script>-->
 <!--</body>-->
 <!--</html>-->
