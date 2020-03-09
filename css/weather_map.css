@@ -1,5 +1,5 @@
 body {
-    background-color: #31255a;
+    background-color: #54416d;
 }
 #map {
     width: 100%;
@@ -8,6 +8,19 @@ body {
 .navbar {
     background-color: #8fe0ff;
 }
+
+.city{
+    color: #31255a;
+    font-weight: bold;
+}
+
+#city-on-load {
+    margin-top: 1em;
+    text-align: center;
+    font-family: 'Mitr', sans-serif;
+    color: #8fe0ff;
+}
+
 .icons {
     height: 75px;
     width: 75px;
@@ -19,11 +32,12 @@ body {
 }
 .card {
     margin: auto;
-    height: 300px;
+    height: 350px;
 }
 .card-text {
     text-align: center;
     color: 	#31255a;
+    font-family: 'Mitr', sans-serif;
     font-weight: bold;
     font-size: 20px;
 }

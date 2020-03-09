@@ -6,6 +6,7 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
@@ -15,28 +16,33 @@
         <img src="icons/clear-day2.gif" width="30" height="30" class="d-inline-block align-top" alt="gif of sun">
         Weather Project
     </a>
+    <div class="city"></div>
     <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
 </nav>
+
+<div>
+    <h2 id="current-city"></h2>
+</div>
 
 <div class="card-container d-flex justify-content-center ">
     <div class="card d-flex" style="width: 18rem; background-color: #a7bcf2;" id="get-weather-now">
         <img id="insert-pic-current" src="" class="card-img-top icons" alt="current weather icon">
         <div class="card-body">
-            <p class="card-text">Today's Forecast</p>
+            <p class="card-text" id="today-text">Today's Forecast</p>
             <p class="today"></p>
         </div>
     </div>
     <div class="card" style="width: 18rem; background-color: #a7bcf2;" id="weather-tomorrow">
         <img id="insert-pic-next" src="" class="card-img-top icons" alt="tomorrows weathe icon">
         <div class="card-body">
-            <p class="card-text">Tomorrows Forecast</p>
+            <p class="card-text" id="tomorrow-text">Tomorrows Forecast</p>
             <p class="tomorrow"></p>
         </div>
     </div>
     <div class="card" style="width: 18rem; background-color: #a7bcf2;" id="next-day-weather">
         <img id="insert-pic-next-after" src="" class="card-img-top icons" alt="next days weather icon">
         <div class="card-body">
-            <p class="card-text">Next Days Forecast</p>
+            <p class="card-text" id="next-day-text">Next Days Forecast</p>
             <p class="next-day"></p>
         </div>
     </div>
@@ -46,7 +52,7 @@
 <div class="container">
     <div id='map'></div>
 </div>
-<!--<script src="js/jquery-warmup.js"></script>-->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
