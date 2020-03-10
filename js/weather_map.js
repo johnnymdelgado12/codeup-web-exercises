@@ -77,7 +77,19 @@ function reverseGeocode(coordinates, token) {
         // to get all the data from the request, comment out the following three lines...
         .then(function(data) {
             console.log(data.features);
-            return data.features[0].context[2].text + ', ' + data.features[0].context[3].text + ', ' + '<br>' + data.features[0].context[4].text;
+            // return data.features[0].context[2].text + ', ' + data.features[0].context[3].text + ', ' + '<br>' + data.features[0].context[4].text;
+            var place = '', region = '', country = '';
+            $.each(data.features, function(i, obj) {
+                if(obj.id.includes('place') || obj.id.includes('locality')) {
+                    place = obj.text;
+                } else if(obj.id.includes('region')) {
+                    region = obj.text;
+                } else if(obj.id.includes('country')) {
+                    country = obj.text;
+                }
+
+            });
+            return place + ', '+ region + ', ' + '<br>' + country;
         });
 }
 
@@ -88,6 +100,8 @@ function getCity(){
         $('#current-city').html('<h2 id="city-on-load">' + result + '</h2>');
     });
 }
+
+// s
 
 function onPageLoad () {
     getCity();

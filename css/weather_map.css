@@ -69,9 +69,8 @@ body {
     font-size: 30px;
     font-family: Orbitron;
     letter-spacing: 7px;
+}
 
-
-
-
-
+footer {
+    margin-top: 2em;
 }
